@@ -4,6 +4,14 @@
 
 <div class="row">
   <% @products.each do |product| %>
-    <%= product.name %>
+  <div class="category-product small-12 medium-4 columns">
+    <h3>
+      <%= product.builder.name %><br />
+      <b><%= product.name %></b>
+    </h3>
+    <h4>
+      <%= product.blurb %>
+    </h4>
+  </div>
   <% end %>
 </div>
