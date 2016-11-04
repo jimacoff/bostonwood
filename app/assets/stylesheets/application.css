@@ -17,6 +17,25 @@
  */
 
 .sidebar {
-  position: absolute;
-  left: 0; top: 92px; bottom: 0;
+  background: green;
+  height: 100%;
+}
+
+.top-header {
+  background: #439B4F;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+.top-header h1 {
+  font-size: 4em;
+  font-family: 'Sanchez', serif;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.main {
+  background: yellow;
+  height: 100%;
 }

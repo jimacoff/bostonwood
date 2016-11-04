@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "bostonwood" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -12,13 +13,18 @@
   </head>
 
   <body>
-    <div class="sidebar large 2-columns">
+    <div class="top-header">
+      <h1>bostonwood</h1>
+    </div>
+    <div class="sidebar small-12 medium-2 columns">
       <ul class="side-nav" role="navigation" title="Category List">
-        <li>Test Data</li>
+        <% @builders.each do |builder| %>
+          <%= builder.name %>
+        <% end %>
       </ul>
     </div>
-
-    <%= yield %>
-
+    <div class="main small-12 medium-10 columns">
+      <%= yield %>
+    </div>
   </body>
 </html>

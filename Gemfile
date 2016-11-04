@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem "factory_girl_rails", "~> 4.0"
 gem 'foundation-rails'
+gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
@@ -28,8 +29,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 group :test do
   gem 'coveralls', require: false
+  gem 'database_cleaner'
 end
 
 group :development, :test do
