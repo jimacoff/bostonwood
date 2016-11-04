@@ -15,3 +15,8 @@
  *= require foundation_and_overrides
 
  */
+
+.sidebar {
+  position: absolute;
+  left: 0; top: 92px; bottom: 0;
+}
