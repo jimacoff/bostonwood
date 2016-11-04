@@ -18,8 +18,8 @@
     </div>
     <div class="sidebar small-12 medium-2 columns">
       <ul class="side-nav" role="navigation" title="Category List">
-        <% @builders.each do |builder| %>
-          <%= builder.name %>
+        <% Category.all.each do |category| %>
+          <%= link_to category.name, category_path(category.id) %>
         <% end %>
       </ul>
     </div>
