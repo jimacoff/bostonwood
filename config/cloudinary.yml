@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: bostonwood
+  api_key: '123712695625226'
+  api_secret: 0oODCbxImWLHkN3jycDhD1WHSdM
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: bostonwood
+  api_key: '123712695625226'
+  api_secret: 0oODCbxImWLHkN3jycDhD1WHSdM
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: bostonwood
+  api_key: '123712695625226'
+  api_secret: 0oODCbxImWLHkN3jycDhD1WHSdM
+  enhance_image_tag: true
+  static_image_support: false

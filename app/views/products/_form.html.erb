@@ -1,0 +1,11 @@
+<div>
+  <%= form_for [@category, @product], html: { multipart: true } do |f| %>
+    <div class="field">
+      <%= f.file_field :image %>
+    </div>
+    <div>
+      <%= f.submit 'Update User' %>
+    </div>
+  </div>
+  <% end %>
+</div>
