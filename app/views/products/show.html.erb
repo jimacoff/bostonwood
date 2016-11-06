@@ -1,3 +1,16 @@
-<h1><%= @product.name %></h1>
+<div class="row">
+  <div class="small-12 large-12 columns product-title">
+    <h1><%= @product.name %></h1>
+    <h3><%= @product.builder.name %></h3>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-6 columns edit-product-image">
+    <%= image_tag @product.image_url(:standard) %><br />
+  </div>
+  <div class="small-12 large-6 columns">
+    <p><%= @product.description %></p>
+  </div>
+</div>
 
 <%= link_to "edit", edit_category_product_path(@category, @product) %>
