@@ -1,10 +1,32 @@
 <div>
   <%= form_for [@category, @product], html: { multipart: true } do |f| %>
     <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :blurb %>
+      <%= f.text_field :blurb %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+
+    <div class="field">
+      <%= f.label :build_material %>
+      <%= f.text_field :build_material %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image %>
       <%= f.file_field :image %>
     </div>
+    <br />
     <div>
-      <%= f.submit 'Update User' %>
+      <%= f.submit 'Update Product' %>
     </div>
   </div>
   <% end %>

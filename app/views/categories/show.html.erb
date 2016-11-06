@@ -4,13 +4,15 @@
 
 <div class="row">
   <% @products.each do |product| %>
-  <a href="categories/<%= @category.id %>/products/<%= product.id %>">
+  <a href="<%= @category.id %>/products/<%= product.id %>">
     <div class="category-product small-12 medium-4 columns">
       <h3>
         <%= product.builder.name %><br />
         <b><%= product.name %></b>
       </h3>
-      <h4>
+      <% unless product.image_url.nil? %>
+        <%= image_tag product.image_url(:thumbnail) %><br />
+      <% end %>      <h4>
         <%= product.blurb %>
       </h4>
     </div>
