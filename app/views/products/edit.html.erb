@@ -1,5 +1,7 @@
-<% unless @product.image_url.nil? %>
+<div class="row">
   <%= image_tag @product.image_url(:standard) %><br />
-<% end %>
+</div>
 
-<%= render "form" %>
+<div class="row">
+  <%= render "form" %>
+</div>

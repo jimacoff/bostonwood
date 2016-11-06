@@ -16,6 +16,15 @@
 
  */
 
+.flash-container {
+  padding: 10px;
+  color: white;
+  background: #CC3D3D;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .sidebar {
   background: white;
   padding: 5px;
@@ -50,6 +59,6 @@
   text-align: center;
 }
 
-.field {
-  width: 40%;
+.product-thumbnail {
+  padding: 10px;
 }

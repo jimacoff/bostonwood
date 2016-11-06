@@ -6,6 +6,8 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
   validates :build_material, presence: true
+  validates :blurb, length: { maximum: 60 }
+  validates :image, presence: true
 
   mount_uploader :image, ImageUploader
 

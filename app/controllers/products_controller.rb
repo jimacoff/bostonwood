@@ -14,12 +14,14 @@ class ProductsController < ApplicationController
     @product = @category.products.find(params[:id])
 
     @product.update_attributes(product_params)
+
     if !params[:product][:image].nil?
       @product.image = params[:product][:image]
     end
     if @product.save
-      redirect_to root_path
+      redirect_to category_product_path(@category, @product)
     else
+      flash[:notice] = @product.errors.full_messages.join(", ")
       render action: 'edit'
     end
   end
