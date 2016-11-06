@@ -16,6 +16,19 @@
 .sidebar {
   background: white;
   padding: 5px;
+  padding-top: 20px;
+  height: 100%;
+}
+
+.sidebar a {
+  font-size: 24px;
+  color: black;
+}
+
+.sidebar a:hover {
+  transition: color 0.25s, ease;
+  font-size: 24px;
+  color: #439B4F;
 }
 
 .top-header {
@@ -47,4 +60,9 @@
 
 .product-thumbnail {
   padding: 10px;
+}
+
+.edit-product-image img {
+  display: block;
+  margin: auto;
 }

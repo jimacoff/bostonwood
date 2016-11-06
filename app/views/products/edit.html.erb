@@ -1,7 +1,8 @@
 <div class="row">
-  <%= image_tag @product.image_url(:standard) %><br />
-</div>
-
-<div class="row">
-  <%= render "form" %>
+  <div class="small-12 large-6 columns edit-product-image">
+    <%= image_tag @product.image_url(:standard) %><br />
+  </div>
+  <div class="small-12 large-6 columns">
+    <%= render "form" %>
+  </div>
 </div>

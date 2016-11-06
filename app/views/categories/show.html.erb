@@ -10,9 +10,8 @@
         <%= product.builder.name %><br />
         <b><%= product.name %></b>
       </h3>
-      <% unless product.image_url.nil? %>
         <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
-      <% end %>      <h4>
+      <h4>
         <%= product.blurb %>
       </h4>
     </div>
