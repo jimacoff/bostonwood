@@ -13,9 +13,11 @@
   </head>
 
   <body>
-    <div class="top-header">
-      <h1>bostonwood</h1>
-    </div>
+    <a href="<%= root_path %>" >
+      <div class="top-header">
+        <h1>bostonwood</h1>
+      </div>
+    </a>
     <div class="sidebar small-12 medium-2 columns">
       <ul class="side-nav" role="navigation" title="Category List">
         <% Category.all.each do |category| %>
