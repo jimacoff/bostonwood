@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 class ImageUploader < CarrierWave::Uploader::Base
-
   include Cloudinary::CarrierWave
 
   process :tags => ['post_picture']
