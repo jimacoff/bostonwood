@@ -4,6 +4,21 @@ class CategoriesController < ApplicationController
     @builders = Builder.all
   end
 
+  def new
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.new(category_params)
+    if @category.save
+      redirect_to root_path
+      flash[:notice] = "Category added successfully"
+    else
+      flash[:notice] = @category.errors.full_messages.join(", ")
+      render :new
+    end
+  end
+
   def show
     @category = Category.find(params[:id])
     @products = @category.products.order('name ASC')
