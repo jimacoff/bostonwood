@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  devise_for :admins
+
   root "site#index"
 
-  resources :categories, only: [:index, :show] do
-    resources :products, only: [:show, :edit, :update]
+  resources :categories, only: [:index, :show, :edit, :update, :new, :create] do
+    resources :products, only: [:show, :edit, :update, :new, :create]
   end
 
-  resources :builders, only: [:show]
+  resources :builders, only: [:show, :new, :create]
 
   resources :site, only: [:index]
 end
