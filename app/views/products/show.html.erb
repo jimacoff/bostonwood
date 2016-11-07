@@ -12,7 +12,53 @@
     <h4><%= @product.description %></h4>
   </div>
 </div>
+<div class="row">
+  <div class="small-12 large-6 columns pricing-info">
+    <table>
+      <thead>
+        <tr>
+          <th width="150" colspan="4">Widths</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Content Goes Here</td>
+          <td>Content</td>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+        <tr>
+          <td>Content Goes Here</td>
+          <td>Content</td>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+        <tr>
+          <td>Content Goes Here</td>
+          <td>Content</td>
+          <td>Content Goes Here</td>
+          <td>Content Goes Here</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="small-12 large-6 columns">
+    <h4>This is just some test data.</h4>
+  </div>
+</div>
 
 <% if current_admin != nil %>
   <%= link_to "edit", edit_category_product_path(@category, @product) %>
 <% end %>
+
+{"unfinished_pricing":[{
+    "widths":["12", "18", "24", "30", "36", "42"],
+    "heights":["24", "36", "48", "60", "72", "84"],
+    "1":["24", "49", "74", "99", "124", "149"],
+    "2":["49", "74", "99", "124", "149", "174"],
+    "3":["74", "99", "124", "149", "174", "199"],
+    "4":["99", "124", "149", "174", "199", "224"],
+    "5":["124", "149", "174", "199", "224", "249"],
+    "6":["149", "174", "199", "224", "249", "274"]
+  }]
+}
