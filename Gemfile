@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 
 gem "factory_girl_rails", "~> 4.0"
@@ -5,6 +6,7 @@ gem 'foundation-rails'
 gem 'pry'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem 'cloudinary'
+gem 'rubocop'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg', '~> 0.18'

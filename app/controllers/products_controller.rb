@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ProductsController < ApplicationController
   def edit
     @category = Category.find(params[:category_id])
