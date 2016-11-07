@@ -12,9 +12,7 @@ describe 'Builder should be added to the database' do
     end
 
     scenario 'should fail if no name given' do
-      failing_builder = Builder.new
-      failing_builder.name = nil
-      expect(failing_builder.save).to eq(false)
+      
     end
   end
 end
