@@ -13,4 +13,6 @@
   </div>
 </div>
 
-<%= link_to "edit", edit_category_product_path(@category, @product) %>
+<% if current_admin != nil %>
+  <%= link_to "edit", edit_category_product_path(@category, @product) %>
+<% end %>

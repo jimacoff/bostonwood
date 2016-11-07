@@ -8,4 +8,26 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @products = @category.products.order('name ASC')
   end
+
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    @category.update_attributes(category_params)
+
+    if @category.save
+      redirect_to category_path(@category)
+    else
+      flash[:notice] = @category.errors.full_messages.join(", ")
+      render action: 'edit'
+    end
+  end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name, :blurb, :description)
+  end
 end

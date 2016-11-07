@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Sanchez" rel="stylesheet">
-    
+
     <title><%= content_for?(:title) ? yield(:title) : "bostonwood" %></title>
 
     <%= stylesheet_link_tag    "application" %>
@@ -20,6 +20,10 @@
     </a>
     <div class="sidebar small-12 medium-2 columns">
       <ul class="side-nav" role="navigation" title="Category List">
+        <% if current_admin != nil %>
+          <%= link_to "sign out of admin", destroy_admin_session_path, method: :delete %>
+          <hr>
+        <% end %>
         <% Category.all.each do |category| %>
           <%= link_to category.name, category_path(category.id) %>
         <% end %>
@@ -33,5 +37,6 @@
       <% end %>
       <%= yield %>
     </div>
+
   </body>
 </html>

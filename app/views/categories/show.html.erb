@@ -18,3 +18,7 @@
   </a>
   <% end %>
 </div>
+
+<% if current_admin != nil %>
+  <%= link_to "edit category info", edit_category_path(@category) %>
+<% end %>
