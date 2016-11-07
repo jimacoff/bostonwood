@@ -11,4 +11,8 @@ class Product < ApplicationRecord
   validates :image, presence: true
 
   mount_uploader :image, ImageUploader
+
+  def price_object
+    Pricing.find_by(product_id: self.id)
+  end
 end
