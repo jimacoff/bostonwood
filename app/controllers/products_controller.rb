@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 class ProductsController < ApplicationController
   def edit
-    @category = Category.find(params[:category_id])
-    @product = @category.products.find(params[:id])
+    if current_admin != nil
+      @category = Category.find(params[:category_id])
+      @product = @category.products.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def show

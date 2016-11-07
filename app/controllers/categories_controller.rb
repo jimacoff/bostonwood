@@ -10,7 +10,11 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
+    if current_admin != nil
+      @category = Category.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   def update
