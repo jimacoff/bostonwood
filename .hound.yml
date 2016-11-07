@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - db/schema.rb
+    - db/migrate
   #DisplayCopNames: true
 
 AccessorMethodName:
@@ -80,6 +81,9 @@ EmptyLiteral:
   Enabled: false
 
 Encoding:
+  Enabled: false
+
+eslint:
   Enabled: false
 
 EvenOdd:
@@ -172,6 +176,9 @@ RaiseArgs:
 
 RegexpLiteral:
   Enabled: false
+
+Ruby:
+  config_file: .rubocop.yml
 
 SelfAssignment:
   Enabled: false

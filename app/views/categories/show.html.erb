@@ -1,0 +1,20 @@
+<div class="row">
+  <h1 class="category-title"><%= @category.name %></h1>
+</div>
+
+<div class="row">
+  <% @products.each do |product| %>
+  <a href="<%= @category.id %>/products/<%= product.id %>">
+    <div class="category-product small-12 medium-4 columns">
+      <h3>
+        <%= product.builder.name %><br />
+        <b><%= product.name %></b>
+      </h3>
+        <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
+      <h4>
+        <%= product.blurb %>
+      </h4>
+    </div>
+  </a>
+  <% end %>
+</div>
