@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 require 'factory_girl_rails'
+require 'spec_helper'
+require 'rails_helper'
 
 FactoryGirl.define do
   factory :builder do
