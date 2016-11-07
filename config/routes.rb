@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :builders, only: [:show]
 
   resources :site, only: [:index]
+
+  devise_for :admins
 end
