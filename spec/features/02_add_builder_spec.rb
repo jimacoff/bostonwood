@@ -12,7 +12,7 @@ describe 'Builder should be added to the database' do
     end
 
     scenario 'should fail if no name given' do
-      
+
     end
   end
 end
