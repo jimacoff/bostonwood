@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 class ProductsController < ApplicationController
   def new
-    @category = Category.find(params[:category_id])
-    @product = Product.new
+    if !current_admin.nil?
+      @category = Category.find(params[:category_id])
+      @product = Product.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -20,7 +24,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    if current_admin != nil
+    if !current_admin.nil?
       @category = Category.find(params[:category_id])
       @product = @category.products.find(params[:id])
     else

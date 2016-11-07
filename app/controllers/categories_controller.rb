@@ -5,7 +5,11 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    if !current_admin.nil?
+      @category = Category.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -25,7 +29,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    if current_admin != nil
+    if !current_admin.nil?
       @category = Category.find(params[:id])
     else
       redirect_to root_path
