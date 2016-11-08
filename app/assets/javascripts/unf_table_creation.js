@@ -13,7 +13,7 @@ $(function() {
   function rowWidthFunction(inputArray) {
     var widthRowStart = "<tr style='text-align:center;'><td></td>";
     for(i = 0; i < inputArray.length; i++) {
-      widthRowStart = widthRowStart + "<td>" + inputArray[i] + "\"</td>";
+      widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "\"</b></td>";
     };
     widthRowStart = widthRowStart + "</tr>";
     table.append(widthRowStart);
@@ -25,7 +25,7 @@ $(function() {
     for(n = 0; n < inputArray.length; n++) {
       var prices = gon.unf_prices[n + 1];
       var priceRowStart = "<tr style='text-align:center;'>";
-      priceRowStart = priceRowStart + "<td>" + heights[n] + "\"</td>";
+      priceRowStart = priceRowStart + "<td><b>" + heights[n] + "\"</b></td>";
 
       for(x = 0; x < prices.length; x++) {
         priceRowStart = priceRowStart + "<td>" + prices[x] + ".99</td>";
