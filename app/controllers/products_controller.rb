@@ -35,6 +35,12 @@ class ProductsController < ApplicationController
   def show
     @category = Category.find(params[:category_id])
     @product = @category.products.find(params[:id])
+    gon.widths = @product.widths
+    gon.heights = @product.heights
+    gon.unf_prices = @product.unfinished_prices
+    gon.fin_prices = @product.finished_prices
+    gon.productId = @product.id
+    gon.product = @product
   end
 
   def update

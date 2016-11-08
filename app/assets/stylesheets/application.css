@@ -78,7 +78,8 @@
   margin: auto;
 }
 
-.pricing-info {
+.pricing {
   display: block;
   margin: auto;
+  text-align: center;
 }

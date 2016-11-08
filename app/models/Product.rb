@@ -12,7 +12,30 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  def price_object
-    Pricing.find_by(product_id: self.id)
+  def widths
+    data = Pricing.find_by(product_id: self.id).data
+    data["item_pricing"]["dimensions"]["widths"]
   end
+
+  def heights
+    data = Pricing.find_by(product_id: self.id).data
+    data["item_pricing"]["dimensions"]["heights"]
+  end
+
+  def unfinished_prices
+    data = Pricing.find_by(product_id: self.id).data
+    data["item_pricing"]["unfinished_pricing"]
+  end
+
+  def finished_prices
+    data = self.unfinished_prices
+    data.each do |key, value|
+      value.each_with_index do |price, index|
+        fin_price = price.to_i
+        fin_price = (fin_price * 1.5).to_i
+        value[index] = fin_price.to_s
+      end
+    end
+  end
+
 end

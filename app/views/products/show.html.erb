@@ -14,29 +14,35 @@
 </div>
 <hr>
 <div class="row">
-  <div class="small-12 large-6 columns unfinished-pricing">
-    <table class="unfinished-pricing-table">
-
+  <div class="small-12 large-6 columns pricing">
+    <h4>unfinished prices</h4>
+    <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
     </table>
   </div>
-  <div class="small-12 large-6 columns">
-    <h4>This is just some test data.</h4>
+  <div class="small-12 large-6 columns pricing">
+    <h4>finished prices</h4>
+    <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
+    </table>
   </div>
 </div>
-
+<hr>
 <% if current_admin != nil %>
   <%= link_to "edit", edit_category_product_path(@category, @product) %>
 <% end %>
-
-<!-- {"unfinished_pricing":{
-    "widths":["12", "18", "24", "30", "36", "42"],
-    "heights":["24", "36", "48", "60", "72", "84"],
-    "1":["24", "49", "74", "99", "124", "149"],
-    "2":["49", "74", "99", "124", "149", "174"],
-    "3":["74", "99", "124", "149", "174", "199"],
-    "4":["99", "124", "149", "174", "199", "224"],
-    "5":["124", "149", "174", "199", "224", "249"],
-    "6":["149", "174", "199", "224", "249", "274"]
+<!--
+{"item_pricing":{
+    "dimensions": {
+      "widths":["12", "18", "24", "30", "36", "42"],
+      "heights":["24", "36", "48", "60", "72", "84"]
+    },
+    "unfinished_pricing": {
+      "1":["24", "49", "74", "99", "124", "149"],
+      "2":["49", "74", "99", "124", "149", "174"],
+      "3":["74", "99", "124", "149", "174", "199"],
+      "4":["99", "124", "149", "174", "199", "224"],
+      "5":["124", "149", "174", "199", "224", "249"],
+      "6":["149", "174", "199", "224", "249", "274"]
+    }
   }
 } -->
 
