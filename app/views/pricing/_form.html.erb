@@ -1,0 +1,21 @@
+<%= form_for [@category, @product, @pricing_object], html: { multipart: true } do |f| %>
+  <div class="field">
+    <%= f.label :widths %>
+    <%= f.text_field :widths %>
+  </div>
+  <div class="field">
+    <%= f.label :heights %>
+    <%= f.text_field :heights %>
+  </div>
+  <% @product.heights.length.times do |count| %>
+    <% price_data = @product.pricing_object.price(count + 1) %>
+    <div class="field">
+      <%= f.label "row #{count + 1}" %>
+      <%= f.text_field :price, value: price_data %>
+    </div>
+  <% end %>
+  <br />
+  <div class="field">
+    <%= f.submit 'Update Pricing' %>
+  </div>
+<% end %>

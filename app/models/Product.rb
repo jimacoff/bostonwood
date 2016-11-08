@@ -12,6 +12,10 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  def pricing_object
+    Pricing.find_by(product_id: self.id)
+  end
+
   def widths
     data = Pricing.find_by(product_id: self.id).data
     data["item_pricing"]["dimensions"]["widths"]

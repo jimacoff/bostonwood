@@ -27,7 +27,8 @@
 </div>
 <hr>
 <% if current_admin != nil %>
-  <%= link_to "edit", edit_category_product_path(@category, @product) %>
+  <%= link_to "edit product info", edit_category_product_path(@category, @product) %><br />
+  <%= link_to "edit pricing info", edit_category_product_pricing_path(@category, @product) %>
 <% end %>
 <!--
 {"item_pricing":{
