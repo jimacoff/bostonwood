@@ -11,7 +11,7 @@
     <% price_data = @product.pricing_object.price(count + 1) %>
     <div class="field">
       <%= f.label "row #{count + 1}" %>
-      <%= f.text_field :price, value: price_data %>
+      <%= f.text_field count, value: price_data %>
     </div>
   <% end %>
   <br />
