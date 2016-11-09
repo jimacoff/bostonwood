@@ -17,27 +17,35 @@ class Product < ApplicationRecord
   end
 
   def widths
-    data = Pricing.find_by(product_id: self.id).data
-    data["item_pricing"]["dimensions"]["widths"]
+    if Pricing.find_by(product_id: self.id) != nil
+      data = Pricing.find_by(product_id: self.id).data
+      data["item_pricing"]["dimensions"]["widths"]
+    end
   end
 
   def heights
-    data = Pricing.find_by(product_id: self.id).data
-    data["item_pricing"]["dimensions"]["heights"]
+    if Pricing.find_by(product_id: self.id) != nil
+      data = Pricing.find_by(product_id: self.id).data
+      data["item_pricing"]["dimensions"]["heights"]
+    end
   end
 
   def unfinished_prices
-    data = Pricing.find_by(product_id: self.id).data
-    data["item_pricing"]["unfinished_pricing"]
+    if Pricing.find_by(product_id: self.id) != nil
+      data = Pricing.find_by(product_id: self.id).data
+      data["item_pricing"]["unfinished_pricing"]
+    end
   end
 
   def finished_prices
-    data = self.unfinished_prices
-    data.each do |key, value|
-      value.each_with_index do |price, index|
-        fin_price = price.to_i
-        fin_price = (fin_price * 1.5).to_i
-        value[index] = fin_price.to_s
+    if Pricing.find_by(product_id: self.id) != nil
+      data = self.unfinished_prices
+      data.each do |key, value|
+        value.each_with_index do |price, index|
+          fin_price = price.to_i
+          fin_price = (fin_price * 1.5).to_i
+          value[index] = fin_price.to_s
+        end
       end
     end
   end

@@ -1,0 +1,17 @@
+<%= form_for new_category_product_pricing_path(@product), html: { multipart: true } do |f| %>
+  <div class="field">
+    <%= f.label :widths %>
+    <%= f.text_field :widths %>
+  </div>
+  <div class="field">
+    <%= f.label :heights %>
+    <%= f.text_field :heights, id:"height-field" %>
+  </div>
+  <button type="button" onclick="generateRows();" class="generate-button">generate rows</button>
+  <div class="field append-after" >
+  </div>
+  <br /><br />
+  <div class="field">
+    <%= f.submit 'Update Pricing' %>
+  </div>
+<% end %>

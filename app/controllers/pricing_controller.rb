@@ -1,4 +1,10 @@
 class PricingController < ApplicationController
+  def new
+    @product = Product.find(params[:product_id])
+    @category = Category.find(params[:category_id])
+    @pricing_object = Pricing.new
+  end
+
   def edit
     @product = Product.find(params[:product_id])
     @category = Category.find(params[:category_id])

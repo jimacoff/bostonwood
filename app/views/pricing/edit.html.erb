@@ -1,3 +1,4 @@
 <h1>edit <%= @product.name %> pricing</h1>
-
-<%= render "form" %>
+<% if @product.pricing_object != nil %>
+  <%= render "form" %>
+<% end %>
