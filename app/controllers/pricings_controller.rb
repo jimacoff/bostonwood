@@ -1,8 +1,34 @@
-class PricingController < ApplicationController
+class PricingsController < ApplicationController
   def new
     @product = Product.find(params[:product_id])
     @category = Category.find(params[:category_id])
     @pricing_object = Pricing.new
+  end
+
+  def create
+    @pricing_object = Pricing.new
+    @pricing_object.product_id = params[:pricings][:product_id]
+    widths = params[:pricings][:widths].split(" ")
+    heights = params[:pricings][:heights].split(" ")
+    pricing_data = {}
+    heights.length.times do |count|
+      array = params[count.to_s].split(" ")
+      pricing_data[count.to_s.to_sym] = array
+    end
+    data = {}
+    data[:item_pricing] = {}
+    data[:item_pricing][:dimensions] = {}
+    data[:item_pricing][:dimensions][:widths] = widths
+    data[:item_pricing][:dimensions][:heights] = heights
+    data[:item_pricing][:unfinished_pricing] = pricing_data
+    @pricing_object.data = data.to_json
+    if @pricing_object.save
+      redirect_to root_path
+      flash[:notice] = "Pricing added successfully"
+    else
+      flash[:notice] = @pricing_object.errors.full_messages.join(", ")
+      render :new
+    end
   end
 
   def edit

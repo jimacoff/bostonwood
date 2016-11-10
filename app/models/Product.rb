@@ -18,21 +18,21 @@ class Product < ApplicationRecord
 
   def widths
     if Pricing.find_by(product_id: self.id) != nil
-      data = Pricing.find_by(product_id: self.id).data
+      data = JSON.parse(Pricing.find_by(product_id: self.id).data)
       data["item_pricing"]["dimensions"]["widths"]
     end
   end
 
   def heights
     if Pricing.find_by(product_id: self.id) != nil
-      data = Pricing.find_by(product_id: self.id).data
+      data = JSON.parse(Pricing.find_by(product_id: self.id).data)
       data["item_pricing"]["dimensions"]["heights"]
     end
   end
 
   def unfinished_prices
     if Pricing.find_by(product_id: self.id) != nil
-      data = Pricing.find_by(product_id: self.id).data
+      data = JSON.parse(Pricing.find_by(product_id: self.id).data)
       data["item_pricing"]["unfinished_pricing"]
     end
   end

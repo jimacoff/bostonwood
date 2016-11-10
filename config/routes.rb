@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   root "site#index"
 
   resources :categories, only: [:index, :show, :edit, :update, :new, :create] do
-    resources :products, only: [:show, :edit, :update, :new, :create] do
-      resources :pricing, only: [:edit, :update, :new, :create]
-    end
+    resources :products, only: [:show, :edit, :update, :new, :create]
   end
+
+  resources :pricings, only: [:edit, :update, :new, :create]
 
   resources :builders, only: [:show, :new, :create]
 

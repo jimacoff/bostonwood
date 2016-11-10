@@ -22,8 +22,8 @@ $(function() {
 
   // add pricing below
   function rowPriceFunction(inputArray) {
-    for(n = 0; n < inputArray.length; n++) {
-      var prices = gon.fin_prices[n + 1];
+    for(n = 0; n < (inputArray.length - 1); n++) {
+      var prices = gon.fin_prices[n];
       var priceRowStart = "<tr style='text-align:center;'>";
       priceRowStart = priceRowStart + "<td>" + heights[n] + "\"</td>";
 
