@@ -4,22 +4,20 @@ class Pricing < ApplicationRecord
   validates :product, presence: true
 
   def widths
-    if Pricing.find_by(product_id: self.id) != nil
-      var = data["item_pricing"]["dimensions"]["widths"]
-      export = JSON.parse(var)
-      export.join(", ")
-    end
+    object = JSON.parse(self.data)
+    export = object["item_pricing"]["dimensions"]["widths"]
+    export.join(" ")
   end
 
   def heights
-    if Pricing.find_by(product_id: self.id) != nil
-      data["item_pricing"]["dimensions"]["heights"].join(", ")
-    end
+    object = JSON.parse(self.data)
+    export = object["item_pricing"]["dimensions"]["heights"]
+    export.join(" ")
   end
 
   def price(number)
-    if Pricing.find_by(product_id: self.id) != nil
-      self.data["item_pricing"]["unfinished_pricing"][number.to_s].join(", ")
-    end
+    object = JSON.parse(self.data)
+    export = object["item_pricing"]["unfinished_pricing"][number.to_s]
+    export.join(" ")
   end
 end

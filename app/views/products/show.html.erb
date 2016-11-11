@@ -31,7 +31,7 @@
 <% if current_admin != nil %>
   <%= link_to "edit product info", edit_category_product_path(@category, @product) %><br />
   <% if @product.pricing_object != nil %>
-    <%= link_to "edit pricing info", edit_pricing_path %>
+    <%= link_to "edit pricing info", edit_pricing_path(@pricing_object) %>
   <% else %>
     <%= link_to "add pricing", new_pricing_path(product_id: @product.id, category_id: @category.id) %>
   <% end %>

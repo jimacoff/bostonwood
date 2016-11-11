@@ -32,27 +32,28 @@ class PricingsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:product_id])
-    @category = Category.find(params[:category_id])
-    @pricing_object = @product.pricing_object
+    @pricing_object = Pricing.find(params[:id])
+    @product = @pricing_object.product
   end
 
   def update
-    @product = Product.find(params[:product_id])
-    @category = Category.find(params[:category_id])
-    @pricing_object = @product.pricing_object
-    height_array_length = params[:pricing][:heights].split(", ").length
-    widht_array_length = params[:pricing][:heights].split(", ").length
+    @pricing_object = Pricing.find(params[:id])
+    height_array_length = params[:pricing][:heights].split(" ").length
+    width_array_length = params[:pricing][:heights].split(" ").length
+    object_data = JSON.parse(@pricing_object.data)
 
-    @pricing_object.data["item_pricing"]["dimensions"]["widths"] = params[:pricing][:widths].split(", ")
-    @pricing_object.data["item_pricing"]["dimensions"]["heights"] = params[:pricing][:heights].split(", ")
+    object_data["item_pricing"]["dimensions"]["widths"] = params[:pricing][:widths].split(" ")
+    object_data["item_pricing"]["dimensions"]["heights"] = params[:pricing][:heights].split(" ")
 
-    (height_array_length - 1).times do |count|
-      @pricing_object.data["item_pricing"]["unfinished_pricing"][(count + 1).to_s] = params[:pricing][(count + 1).to_s].split(", ")
+    (height_array_length).times do |count|
+      object_data["item_pricing"]["unfinished_pricing"][(count).to_s] = params[:pricing][(count).to_s].split(" ")
     end
 
+    @pricing_object.data = object_data.to_json
+
     if @pricing_object.save
-      redirect_to category_product_path(@category, @product)
+      redirect_to root_path
+      flash[:notice] = "pricing updated!"
     else
       flash[:notice] = @pricing_object.errors.full_messages.join(", ")
       render action: 'edit'

@@ -33,5 +33,5 @@ $(function() {
       table.append(priceRowStart)
     }
   };
-  rowPriceFunction(widths);
+  rowPriceFunction(heights);
 });
