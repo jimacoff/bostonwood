@@ -13,7 +13,9 @@ class Product < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   def pricing_object
-    Pricing.find_by(product_id: self.id)
+    if Pricing.find_by(product_id: self.id) != nil
+      Pricing.find_by(product_id: self.id)
+    end
   end
 
   def widths
