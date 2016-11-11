@@ -17,7 +17,7 @@ $(function() {
     };
     widthRowStart = widthRowStart + "</tr>";
     table.append(widthRowStart);
-  };
+  }
   rowWidthFunction(widths);
 
   // add pricing below
@@ -30,8 +30,8 @@ $(function() {
       for(x = 0; x < prices.length; x++) {
         priceRowStart = priceRowStart + "<td>" + prices[x] + ".99</td>";
       }
-      table.append(priceRowStart)
+      table.append(priceRowStart);
     }
-  };
+  }
   rowPriceFunction(heights);
 });

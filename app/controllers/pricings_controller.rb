@@ -45,7 +45,7 @@ class PricingsController < ApplicationController
     object_data["item_pricing"]["dimensions"]["widths"] = params[:pricing][:widths].split(" ")
     object_data["item_pricing"]["dimensions"]["heights"] = params[:pricing][:heights].split(" ")
 
-    (height_array_length).times do |count|
+    height_array_length.times do |count|
       object_data["item_pricing"]["unfinished_pricing"][(count).to_s] = params[:pricing][(count).to_s].split(" ")
     end
 
