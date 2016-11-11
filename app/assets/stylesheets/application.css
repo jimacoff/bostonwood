@@ -77,3 +77,9 @@
   display: block;
   margin: auto;
 }
+
+.pricing {
+  display: block;
+  margin: auto;
+  text-align: center;
+}

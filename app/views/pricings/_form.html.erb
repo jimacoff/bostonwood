@@ -1,0 +1,20 @@
+<%= form_for @pricing_object, url: { action: "update" } do |f| %>
+  <div class="field">
+    <%= f.label :widths %>
+    <%= f.text_field :widths, value: @pricing_object.widths %>
+  </div>
+  <div class="field">
+    <%= f.label :heights %>
+    <%= f.text_field :heights, value: @pricing_object.heights %>
+  </div>
+  <% @product.heights.length.times do |count| %>
+    <div class="field">
+      <%= f.label "row #{count + 1}" %>
+      <%= f.text_field count, value: @pricing_object.price(count) %>
+    </div>
+  <% end %>
+  <br />
+  <div class="field">
+    <%= f.submit 'Update Pricing' %>
+  </div>
+<% end %>

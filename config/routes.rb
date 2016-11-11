@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :products, only: [:show, :edit, :update, :new, :create]
   end
 
+  resources :pricings, only: [:edit, :update, :new, :create]
+
   resources :builders, only: [:show, :new, :create]
 
   resources :site, only: [:index]
