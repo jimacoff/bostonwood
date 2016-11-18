@@ -116,3 +116,7 @@
   background: #439B4F;
   color: white;
 }
+
+.delete-link a {
+  color: #cc3d3d;
+}

@@ -36,4 +36,8 @@
   <% else %>
     <%= link_to "add pricing", new_pricing_path(product_id: @product.id, category_id: @category.id) %>
   <% end %>
+  <br />
+  <span class="delete-link">
+    <%= link_to "delete product", category_product_path(@category, @product), {method: :delete} %>
+  </span>
 <% end %>

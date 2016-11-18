@@ -61,6 +61,14 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.pricing_object.delete
+    @product.delete
+    redirect_to root_path
+    flash[:notice] = 'Product successfully deleted'
+  end
+
   private
 
   def product_params
