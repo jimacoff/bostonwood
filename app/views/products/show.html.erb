@@ -1,3 +1,4 @@
+<%= include_gon %>
 <div class="row">
   <div class="small-12 large-12 columns product-title">
     <h1><%= @product.name %></h1>
@@ -14,13 +15,13 @@
 </div>
 <hr>
 <div class="row">
-  <div class="small-12 large-6 columns pricing">
+  <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
     <% if @product.pricing_object != nil %>
       <h4>unfinished prices</h4>
       <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
       </table>
     </div>
-    <div class="small-12 large-6 columns pricing">
+    <div class="small-12 large-6 columns pricing" id="finished-pricing">
       <h4>finished prices</h4>
       <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
       </table>

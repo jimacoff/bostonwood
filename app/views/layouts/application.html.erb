@@ -6,11 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Sanchez" rel="stylesheet">
 
     <title><%= content_for?(:title) ? yield(:title) : "bostonwood" %></title>
-
     <%= stylesheet_link_tag    "application" %>
+    <%= include_gon(init: true) %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <%= include_gon %>
   </head>
 
   <body>
@@ -27,6 +26,9 @@
           <%= link_to "+ new category", new_category_path %>
           <hr>
         <% end %>
+        <%= link_to 'home', root_path %><br />
+        <%= link_to 'locations', site_locations_path(1) %>
+        <hr>
         <% Category.all.each do |category| %>
           <%= link_to category.name, category_path(category.id) %><br />
         <% end %>

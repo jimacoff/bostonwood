@@ -22,14 +22,17 @@
 
 .sidebar a {
   transition: color 0.25s, ease;
-  font-size: 24px;
+  font-size: 1em;
   color: black;
 }
 
 .sidebar a:hover {
   transition: color 0.25s, ease;
-  font-size: 24px;
   color: #439B4F;
+}
+
+.sidebar hr {
+  margin-right: 20px;
 }
 
 .top-header {
@@ -82,4 +85,34 @@
   display: block;
   margin: auto;
   text-align: center;
+}
+
+#homepage {
+  display: block;
+  margin: auto;
+}
+
+.image-text {
+  padding: 5px;
+  opacity: 0;
+  text-align: center;
+}
+
+.homepage-image {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  height: 15vw;
+  margin: 10px;
+  border: 1px solid #439B4F;
+ }
+
+ .homepage-image:hover {
+   opacity: .75
+ }
+
+.homepage-image:hover .image-text {
+  transition: opacity .25s ease-in-out;
+  opacity: 1;
+  background: #439B4F;
+  color: white;
 }

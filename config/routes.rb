@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   resources :builders, only: [:show, :new, :create]
 
-  resources :site, only: [:index]
+  resources :site, only: [:index] do
+    resources :locations, only: [:index]
+  end
 end

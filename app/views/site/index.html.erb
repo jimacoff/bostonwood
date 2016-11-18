@@ -1,7 +1,18 @@
-<div class="row">
-  <% @pictures.each do |image| %>
-    <div class="small-12 medium-4 columns">
-      <%= image_tag image %>
+<% text = ['dressers & nightstands', 'wall units', 'modifications and custom work our speciality', 'unfinished furniture', 'tables & chairs', 'finished furniture'] %>
+<div class="row" id="homepage">
+  <% @pictures.each_with_index do |image, index| %>
+   <a href="/categories/1">
+    <div class="small-12 medium-3 columns homepage-image end"
+      style="background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.0),
+        rgba(0, 0, 0, 0.0)
+      ),
+      url('./images/<%= image %>');
+      background-size: cover;
+      background-position: center;" >
+      <h4 class="image-text"><%= text[index] %></h4>
     </div>
+  </a>
   <% end %>
 </div>
