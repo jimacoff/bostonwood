@@ -58,12 +58,13 @@
 }
 
 .product-title {
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 
 .product-title h1 {
   color: #439B4F;
+  margin-bottom: 0px;
 }
 
 .category-product {
