@@ -29,6 +29,16 @@
   </div>
 </div>
 <hr>
+<div class="row">
+  <div class="small-12 columns pricing" id="unfinished-pricing">
+    <% @colors.each do |color| %>
+      <div class="small-4 medium-2 columns end color-div">
+        <img src="/images/colors/test.png" class="color-image"/>
+        <h4><b><%= color %></b><h4>
+      </div>
+    <% end %>
+  </div>
+</div>
 <% if current_admin != nil %>
   <%= link_to "edit product info", edit_category_product_path(@category, @product) %><br />
   <% if @product.pricing_object != nil %>

@@ -32,6 +32,10 @@ class Product < ApplicationRecord
     end
   end
 
+  def colors
+    ['english chestnut', 'golden oak', 'red oak', 'white', 'red', 'green', 'ebony', 'pickled oak', 'natural', 'coffee']
+  end
+
   def unfinished_prices
     if Pricing.find_by(product_id: self.id) != nil
       data = JSON.parse(Pricing.find_by(product_id: self.id).data)
