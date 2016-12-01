@@ -147,8 +147,14 @@
 
 .color-image {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
 }
 
 .unfinished-pricing-table {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.unfinished-pricing-table th {
+  background-color: #439B4F;
+  color: white;
 }
