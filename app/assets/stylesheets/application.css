@@ -67,13 +67,17 @@
 }
 
 .category-product {
-  padding: 5px;
+  /*padding: 5px;*/
   text-align: center;
   margin-bottom: 30px;
 }
 
 .product-thumbnail {
   padding: 10px;
+}
+
+.product-text {
+  text-align: left;
 }
 
 .edit-product-image img {
