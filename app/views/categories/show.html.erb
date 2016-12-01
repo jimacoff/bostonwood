@@ -6,12 +6,12 @@
   <a href="<%= @category.id %>/products/<%= product.id %>">
     <div class="category-product small-12 medium-3 columns">
       <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
-      <p class="product-text">
+      <div class="row product-text">
         <b><%= product.name %></b><br />
         <% if product.unfinished_prices != nil %>
           From: $<%= product.unfinished_prices["0"].first %>.99
         <% end %>
-      </p>
+      </div>
     </div>
   </a>
   <% end %>
