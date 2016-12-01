@@ -87,6 +87,9 @@
   font-family: 'Biryani', sans-serif;
   font-weight: bold;
   font-size: 16px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .edit-product-image img {
@@ -143,10 +146,9 @@
 }
 
 .color-image {
-  transition: box-shadow 0.2s, ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.color-image:hover {
+.unfinished-pricing-table {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
-  transition: box-shadow 0.2s, ease;
 }
