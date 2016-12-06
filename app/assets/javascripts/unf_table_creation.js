@@ -4,6 +4,7 @@ $(function() {
     var widths = gon.widths;
     var heights = gon.heights;
     var product = gon.product;
+    var builder = gon.builder;
     var table = $("#unfinished-pricing-table-" + product.id);
 
     // add header to table
