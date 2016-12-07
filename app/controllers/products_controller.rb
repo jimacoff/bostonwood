@@ -43,6 +43,7 @@ class ProductsController < ApplicationController
     gon.fin_prices = @product.finished_prices
     gon.productId = @product.id
     gon.product = @product
+    gon.builder = @product.builder
   end
 
   def update
