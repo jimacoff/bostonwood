@@ -7,7 +7,7 @@ $(function() {
     var table = $("#finished-pricing-table-" + product.id);
     var builder = gon.builder;
 
-    if (builder.name === "Archbold") {
+    if (builder.name === "Archbold" || builder.name === "Penns Creek") {
 
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
