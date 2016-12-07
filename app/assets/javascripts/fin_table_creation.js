@@ -9,7 +9,7 @@ $(function() {
 
     if (builder.name === "Archbold" || builder.name === "Penns Creek") {
 
-      var header = $("<thead><tr><th width='150' colspan=" + (widths.length) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
+      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
       // add widths to top of table
       function rowWidthFunction(inputArray) {
