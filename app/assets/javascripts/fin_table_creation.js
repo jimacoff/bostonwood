@@ -12,7 +12,7 @@ $(function() {
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
       // add widths to top of table
-      function rowWidthFunction(inputArray) {
+      var rowWidthFunction = function(inputArray) {
         var widthRowStart = "<tr style='text-align:center;'>";
         for(i = 0; i < inputArray.length; i++) {
           widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "</b></td>";
@@ -23,7 +23,7 @@ $(function() {
       }
 
       // add pricing below
-      function rowPriceFunction(inputArray) {
+      var rowPriceFunction = function(inputArray) {
         for(n = 0; n < inputArray.length; n++) {
           var prices = gon.unf_prices[n];
           var priceRowStart = "<tr style='text-align:center;'>";
