@@ -34,7 +34,9 @@ $(function() {
           }
           table.append(priceRowStart);
       }};
-      debugger;
+      console.log(widths)
+      console.log(rowPriceFunction)
+      console.log(rowWidthFunction)
       rowWidthFunction(widths);
       rowPriceFunction(heights);
 
