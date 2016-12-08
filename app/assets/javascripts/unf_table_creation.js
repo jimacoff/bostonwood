@@ -9,7 +9,7 @@ $(function() {
 
     if (builder.name !== "Evergreen Unfinished Furniture") {
 
-      var header = $("<thead><tr><th width='150' colspan=" + (widths.length) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
+      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
       table.append(header);
       // add widths to top of table
       function rowWidthFunction(inputArray) {
