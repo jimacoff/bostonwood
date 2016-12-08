@@ -7,7 +7,7 @@ $(function() {
     var table = $("#finished-pricing-table-" + product.id);
     var builder = gon.builder;
 
-    if (builder.name !== "Evergreen Unfinished Furniture") {
+    if (widths[0] !== "Size") {
 
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
