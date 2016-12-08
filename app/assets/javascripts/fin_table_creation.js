@@ -14,7 +14,6 @@ $(function() {
       // add widths to top of table
       function rowWidthFunction(inputArray) {
         var widthRowStart = "<tr style='text-align:center;'>";
-        console.log("test")
         for(i = 0; i < inputArray.length; i++) {
           widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "</b></td>";
           console.log(widthRowStart)
@@ -35,6 +34,7 @@ $(function() {
           }
           table.append(priceRowStart);
       }};
+      console.log("test")
       rowWidthFunction(widths);
       rowPriceFunction(heights);
 
