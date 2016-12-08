@@ -20,7 +20,6 @@ $(function() {
         widthRowStart = widthRowStart + "</tr>";
         table.append(widthRowStart);
       }
-      rowWidthFunction(widths);
 
       // add pricing below
       var rowPriceFunction = function(inputArray) {
@@ -35,8 +34,10 @@ $(function() {
           }
           table.append(priceRowStart);
       }};
-      rowPriceFunction(heights);
 
+      rowWidthFunction(widths);
+      rowPriceFunction(heights);
+      
     } else {
 
       // add header to table
