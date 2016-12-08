@@ -13,7 +13,7 @@ $(function() {
       table.append(header);
       // add widths to top of table
       var rowWidthFunction = function(inputArray) {
-        var widthRowStart = "<tr style='text-align:center;'>";
+        var widthRowStart = "<tr style='text-align:center; border-bottom:1px solid #439B4F;'>";
         for(i = 0; i < inputArray.length; i++) {
           widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "</b></td>";
         };
