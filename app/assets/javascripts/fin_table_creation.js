@@ -16,7 +16,6 @@ $(function() {
         var widthRowStart = "<tr style='text-align:center;'>";
         for(i = 0; i < inputArray.length; i++) {
           widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "</b></td>";
-          console.log(widthRowStart)
         };
         widthRowStart = widthRowStart + "</tr>";
         table.append(widthRowStart);
