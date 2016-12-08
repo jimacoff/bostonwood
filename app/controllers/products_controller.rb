@@ -39,11 +39,11 @@ class ProductsController < ApplicationController
     @colors = @product.colors
     gon.widths = @product.widths
     gon.heights = @product.heights
-    gon.unf_prices = @product.unfinished_prices
-    gon.fin_prices = @product.finished_prices
     gon.productId = @product.id
     gon.product = @product
     gon.builder = @product.builder
+    gon.unf_prices = @product.unfinished_prices
+    gon.fin_prices = @product.finished_prices
   end
 
   def update

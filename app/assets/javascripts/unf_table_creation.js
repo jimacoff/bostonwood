@@ -7,7 +7,7 @@ $(function() {
     var builder = gon.builder;
     var table = $("#unfinished-pricing-table-" + product.id);
 
-    if (builder.name === "Archbold") {
+    if (builder.name !== "Evergreen Unfinished Furniture") {
 
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
       table.append(header);
@@ -27,7 +27,7 @@ $(function() {
         for(n = 0; n < inputArray.length; n++) {
           var prices = gon.unf_prices[n];
           var priceRowStart = "<tr style='text-align:center;'>";
-          priceRowStart = priceRowStart + "<td><b>" + heights[n].split("_").join(" ") + "</b></td>";
+          priceRowStart = priceRowStart + "<td>" + heights[n].split("_").join(" ") + "</td>";
 
           for(x = 0; x < prices.length; x++) {
             var price = Math.round(prices[x] * .75)
@@ -40,7 +40,7 @@ $(function() {
     } else {
 
       // add header to table
-      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Widths</th></tr></thead>");
+      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
       table.append(header);
 
       // add widths to top of table

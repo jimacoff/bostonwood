@@ -7,7 +7,7 @@ $(function() {
     var table = $("#finished-pricing-table-" + product.id);
     var builder = gon.builder;
 
-    if (builder.name === "Archbold" || builder.name === "Penns Creek") {
+    if (builder.name !== "Evergreen Unfinished Furniture") {
 
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
@@ -27,7 +27,7 @@ $(function() {
         for(n = 0; n < inputArray.length; n++) {
           var prices = gon.unf_prices[n];
           var priceRowStart = "<tr style='text-align:center;'>";
-          priceRowStart = priceRowStart + "<td><b>" + heights[n].split("_").join(" ") + "</b></td>";
+          priceRowStart = priceRowStart + "<td>" + heights[n].split("_").join(" ") + "</td>";
 
           for(x = 0; x < prices.length; x++) {
             priceRowStart = priceRowStart + "<td>" + prices[x] + ".99</td>";
@@ -37,8 +37,9 @@ $(function() {
       rowPriceFunction(heights);
 
     } else {
+
       // add header to table
-      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Widths</th></tr></thead>");
+      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
 
       // add widths to top of table
@@ -55,12 +56,13 @@ $(function() {
       // add pricing below
       function rowPriceFunction(inputArray) {
         for(n = 0; n < (inputArray.length); n++) {
-          var prices = gon.fin_prices[n];
+          var prices = gon.unf_prices[n];
           var priceRowStart = "<tr style='text-align:center;'>";
           priceRowStart = priceRowStart + "<td><b>" + heights[n] + "\"</b></td>";
 
           for(x = 0; x < prices.length; x++) {
-            priceRowStart = priceRowStart + "<td>" + prices[x] + ".99</td>";
+            var price = Math.round(prices[x] * 1.5);
+            priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
           }
           table.append(priceRowStart);
         }
