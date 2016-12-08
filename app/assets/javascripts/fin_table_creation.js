@@ -8,7 +8,7 @@ $(function() {
     var builder = gon.builder;
 
     if (builder.name !== "Evergreen Unfinished Furniture") {
-
+      console.log("HI!")
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
       // add widths to top of table
@@ -37,7 +37,7 @@ $(function() {
       rowPriceFunction(heights);
 
     } else {
-
+      console.log("BOO")
       // add header to table
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
