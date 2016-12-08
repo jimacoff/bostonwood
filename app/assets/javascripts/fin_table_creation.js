@@ -11,12 +11,14 @@ $(function() {
 
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
       table.append(header);
-      debugger;
+      console.log("header added")
       // add widths to top of table
       function rowWidthFunction(inputArray) {
         var widthRowStart = "<tr style='text-align:center;'>";
+        console.log(widthRowStart)
         for(i = 0; i < inputArray.length; i++) {
           widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "</b></td>";
+          console.log(widthRowStart)
         };
         widthRowStart = widthRowStart + "</tr>";
         table.append(widthRowStart);
