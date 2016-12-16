@@ -117,18 +117,17 @@
 
 .homepage-image {
   opacity: 1;
-  transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease;
   height: 15vw;
-  margin: 10px;
   border: 1px solid #439B4F;
  }
-
+/*
  .homepage-image:hover {
    opacity: .75
- }
+ }*/
 
 .homepage-image:hover .image-text {
-  transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease;
   opacity: 1;
   background: #439B4F;
   color: white;
