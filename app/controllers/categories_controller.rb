@@ -25,7 +25,20 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @products = @category.products.order('name ASC')
+    @products = []
+    working_products = @category.products
+    working_products.each_with_index do |product, index|
+      if index == 0
+        @products.push(product)
+      else
+        product_name = product.name.split(" ")
+        if product_name[0].to_i > @products[0].name.split(" ")[0].to_i
+          @products.push(product)
+        else
+          @products.unshift(product)
+        end
+      end
+    end
   end
 
   def edit
