@@ -30,12 +30,16 @@ class CategoriesController < ApplicationController
     working_products.each_with_index do |product, index|
       if index == 0
         @products.push(product)
+      elsif product.name.split(" ")[0].to_i > @products.last.name.split(" ")[0].to_i
+        @products << product
       else
-        product_name = product.name.split(" ")
-        if product_name[0].to_i > @products[0].name.split(" ")[0].to_i
-          @products.push(product)
-        else
-          @products.unshift(product)
+        @products.each_with_index do |check, index|
+          if product.name.split(" ")[0].to_i < check.name.split(" ")[0].to_i
+            @products.insert(index, product)
+            return
+          else
+            next
+          end
         end
       end
     end
