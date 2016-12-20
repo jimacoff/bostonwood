@@ -83,12 +83,12 @@
   font-size: 16px;
   background-color: white;
   padding: 30px;
+  text-align: right;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .product-description h2 {
   color: #439B4F;
-  text-align: left;
   white-space: pre-wrap;
   font-weight: bold;
   margin: 0;
@@ -96,7 +96,6 @@
 
 .product-description h3 {
   color: black;
-  text-align: left;
   white-space: pre-wrap;
   font-weight: bold;
   margin: 0;
@@ -104,7 +103,6 @@
 
 .product-description p {
   white-space: pre-wrap;
-  text-align: right;
   margin-top: 20px;
 }
 
