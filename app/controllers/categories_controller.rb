@@ -34,7 +34,7 @@ class CategoriesController < ApplicationController
         @products << product
       else
         @products.each_with_index do |check, index|
-          if product.name.split(" ")[0].to_i < check.name.split(" ")[0].to_i
+          if product.name.split(" ")[0].to_i <= check.name.split(" ")[0].to_i
             @products.insert(index, product)
             break
           else
