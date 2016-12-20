@@ -1,16 +1,13 @@
 <%= include_gon %>
 <div class="row">
-  <div class="small-12 large-12 columns product-title">
-    <h1><%= @product.name %></h1>
-    <h3><%= @product.builder.name %></h3>
-  </div>
-</div>
-<div class="row">
   <div class="small-12 large-6 columns edit-product-image">
     <%= image_tag @product.image_url(:standard) %><br />
   </div>
   <div class="small-12 large-6 columns product-description">
-    <p><%= @product.description %></p>
+      <h2><%= @product.name %></h2>
+      <h3><%= @product.builder.name %></h3>
+      <hr />
+      <p><%= @product.description %></p>
   </div>
 </div>
 <hr>
