@@ -53,9 +53,7 @@ class Product < ApplicationRecord
         'Traditional Cherry',
         'Traditional Mahogany',
         'English Chestnut',
-        'Espresso',
         'Black',
-        'Mocha',
         'Acorn'
       ]
     elsif builder == "Berkshire"
@@ -69,7 +67,6 @@ class Product < ApplicationRecord
         'Cinnamon',
         'Orange Walnut',
         'Spanish Pecan',
-        'English Chestnut',
         'Country Pine',
         'Espresso',
         'Mocha',
@@ -78,9 +75,8 @@ class Product < ApplicationRecord
         'Orange #2',
         'Traditional Cherry',
         'Traditional Mahogany',
-        'Espresso',
+        'English Chestnut',
         'Black',
-        'Mocha',
         'Acorn',
         'White Dove',
         'Bright White',
