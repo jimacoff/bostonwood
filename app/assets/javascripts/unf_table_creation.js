@@ -75,7 +75,7 @@ $(function() {
         rowWidthFunction(widths);
         rowPriceFunction(heights);
       } else {
-        if (builder.name !== "Evergreen") {
+        if (builder.name === "Berkshire") {
           // add header to table
           var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
           table.append(header);
