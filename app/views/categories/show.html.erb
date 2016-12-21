@@ -9,7 +9,14 @@
       <div class="row product-text">
         <b><%= product.name %></b><br />
         <% if product.unfinished_prices != nil %>
-          Starting At: $<%= product.unfinished_prices["0"].first %>.99
+        <%
+          if product.builder.name != "Evergreen"
+            starting_at = (product.unfinished_prices["0"].first.to_i * 3/4)
+          else
+            starting_at = product.unfinished_prices["0"].first
+          end
+        %>
+          Starting At: $<%= starting_at %>.99
         <% end %>
       </div>
     </div>
