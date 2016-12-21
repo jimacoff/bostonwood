@@ -77,7 +77,7 @@ $(function() {
         rowPriceFunction(heights);
       }
 
-      if (builder.name === "Berkshire") {
+      if (builder.name !== "Evergreen") {
           // add header to table
           var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>'" + builder.name + "'Unfinished Pricing</th></tr></thead>");
           table.append(header);
@@ -91,7 +91,6 @@ $(function() {
             widthRowStart = widthRowStart + "</tr>";
             table.append(widthRowStart);
           }
-          rowWidthFunction(widths);
 
           // add pricing below
           function rowPriceFunction(inputArray) {
@@ -106,6 +105,8 @@ $(function() {
               }
               table.append(priceRowStart);
           }};
+
+          rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
 
