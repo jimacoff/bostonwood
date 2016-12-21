@@ -79,7 +79,7 @@ $(function() {
 
       if (builder.name !== "Evergreen") {
           // add header to table
-          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
+          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>'" + builder.name + "'Unfinished Pricing</th></tr></thead>");
           table.append(header);
 
           // add widths to top of table
