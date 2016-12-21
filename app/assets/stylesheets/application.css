@@ -161,6 +161,9 @@
 
 .color-div {
   margin-bottom: 10px;
+  width: 9%;
+  display: inline-block;
+  justify-content: space-between;
 }
 
 .color-div h4 {

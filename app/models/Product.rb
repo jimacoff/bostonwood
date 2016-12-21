@@ -32,8 +32,63 @@ class Product < ApplicationRecord
     end
   end
 
-  def colors
-    ['Natural', 'White Wash', 'Honey', 'Golden Oak', 'Meadow Oak', 'Sable', 'Cinnamon', 'Orange Walnut', 'Spanish Pecan', 'English Chestnut', 'Country Pine', 'Espresso', 'Mocha', 'Black']
+  def colors(builder)
+    if builder == "Evergreen"
+      [
+        'Natural',
+        'White Wash',
+        'Honey',
+        'Golden Oak',
+        'Meadow Oak',
+        'Sable',
+        'Cinnamon',
+        'Orange Walnut',
+        'Spanish Pecan',
+        'Country Pine',
+        'Espresso',
+        'Mocha',
+        'Black Cherry',
+        'Dark Cherry',
+        'Orange #2',
+        'Traditional Cherry',
+        'Traditional Mahogany',
+        'English Chestnut',
+        'Espresso',
+        'Black',
+        'Mocha',
+        'Acorn'
+      ]
+    elsif builder == "Berkshire"
+      [
+        'Natural',
+        'White Wash',
+        'Honey',
+        'Golden Oak',
+        'Meadow Oak',
+        'Sable',
+        'Cinnamon',
+        'Orange Walnut',
+        'Spanish Pecan',
+        'English Chestnut',
+        'Country Pine',
+        'Espresso',
+        'Mocha',
+        'Black Cherry',
+        'Dark Cherry',
+        'Orange #2',
+        'Traditional Cherry',
+        'Traditional Mahogany',
+        'Espresso',
+        'Black',
+        'Mocha',
+        'Acorn',
+        'White Dove',
+        'Bright White',
+        'Parsley Snips',
+        'Big Sky Blue',
+        'Chili Pepper Red'
+      ]
+    end
   end
 
   def unfinished_prices
