@@ -33,7 +33,7 @@ class Product < ApplicationRecord
   end
 
   def colors
-    ['english chestnut', 'golden oak', 'red oak', 'white', 'red', 'green', 'ebony', 'pickled oak', 'natural', 'coffee']
+    ['english chestnut', 'golden oak', 'red oak', 'white', 'red', 'green', 'ebony', 'pickled oak', 'natural', 'coffee', 'test', 'test', 'test']
   end
 
   def unfinished_prices

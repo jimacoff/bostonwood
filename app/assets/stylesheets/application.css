@@ -89,6 +89,7 @@
 
 .product-description h2 {
   color: #439B4F;
+  font-size: 24px;
   white-space: pre-wrap;
   font-weight: bold;
   margin: 0;
@@ -108,7 +109,6 @@
 
 .edit-product-image img {
   display: block;
-  margin: auto;
 }
 
 .pricing {
@@ -155,7 +155,7 @@
 }
 
 .color-div h4 {
-  font-size: 14px;
+  font-size: 8px;
 }
 
 .color-image {
@@ -164,10 +164,17 @@
 }
 
 .unfinished-pricing-table {
+  margin-top: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .unfinished-pricing-table th {
   background-color: #439B4F;
   color: white;
+}
+
+.finishes {
+  /*display: flex;*/
+  justify-content: space-between;
+  text-align: center;
 }

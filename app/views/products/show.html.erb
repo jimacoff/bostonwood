@@ -1,16 +1,13 @@
 <%= include_gon %>
 <div class="row">
-  <div class="small-12 large-6 columns edit-product-image">
+  <div class="small-12 large-4 columns edit-product-image">
     <%= image_tag @product.image_url(:standard) %><br />
   </div>
-  <div class="small-12 large-6 columns product-description">
-      <h2><%= @product.name %></h2>
-      <h3><%= @product.builder.name %></h3>
-      <hr />
+  <div class="small-12 large-8 columns product-description">
+      <h2><%= @product.builder.name %> <%= @product.name %></h2>
       <p><%= @product.description %></p>
   </div>
 </div>
-<hr>
 <div class="row">
   <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
     <% if @product.pricing_object != nil %>
@@ -23,11 +20,10 @@
     <% end %>
   </div>
 </div>
-<hr>
 <div class="row">
-  <div class="small-12 columns pricing" id="unfinished-pricing">
+  <div class="small-12 columns finishes" id="unfinished-pricing">
     <% @colors.each do |color| %>
-      <div class="small-4 medium-2 columns end color-div">
+      <div class="small-4 medium-1 columns color-div end">
         <img src="/images/colors/test.png" class="color-image"/>
         <h4><b><%= color %></b><h4>
       </div>
