@@ -79,6 +79,7 @@
 
 .product-description {
   font-family: 'Biryani', sans-serif;
+  height: 350px;
   font-weight: bold;
   font-size: 16px;
   background-color: white;
@@ -107,8 +108,16 @@
   margin-top: 20px;
 }
 
+.edit-product-image {
+  /*padding: 5px;*/
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
 .edit-product-image img {
-  display: block;
+  max-height: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .pricing {
