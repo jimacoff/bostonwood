@@ -37,8 +37,9 @@ $(function() {
       rowWidthFunction(widths);
       rowPriceFunction(heights);
 
-    } else
-      if (widths[0] === "Size") {
+    }
+
+    if (widths[0] === "Size") {
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
         table.append(header);
         // add widths to top of table
@@ -67,7 +68,9 @@ $(function() {
 
         rowWidthFunction(widths);
         rowPriceFunction(heights);
-      } else if (builder.name === "Berkshire") {
+      }
+
+      if (builder.name !== "Evergreen") {
           // add header to table
           var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
           table.append(header);
@@ -81,7 +84,6 @@ $(function() {
             widthRowStart = widthRowStart + "</tr>";
             table.append(widthRowStart);
           }
-          rowWidthFunction(widths);
 
           // add pricing below
           function rowPriceFunction(inputArray) {
@@ -97,8 +99,12 @@ $(function() {
               table.append(priceRowStart);
             }
           }
+
+          rowWidthFunction(widths);
           rowPriceFunction(heights);
-      } else if (builder.name === "Evergreen") {
+      }
+
+      if (builder.name === "Evergreen") {
         // add header to table
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
         table.append(header);
