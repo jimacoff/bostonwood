@@ -72,8 +72,7 @@ $(function() {
             }
             table.append(priceRowStart);
         }};
-        console.log(widths)
-        console.logg(heights)
+
         rowWidthFunction(widths);
         rowPriceFunction(heights);
       }
@@ -108,6 +107,8 @@ $(function() {
               table.append(priceRowStart);
           }};
           console.log("hello")
+          console.log(widths)
+          console.logg(heights)
           rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
