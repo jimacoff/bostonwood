@@ -33,7 +33,7 @@ $(function() {
             if (price % 5 === 0) {
               price = price - 1;
             }
-            priceRowStart = priceRowStart + "<td>" + price + ".77</td>";
+            priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
           }
           table.append(priceRowStart);
       }};
@@ -91,7 +91,7 @@ $(function() {
             widthRowStart = widthRowStart + "</tr>";
             table.append(widthRowStart);
           }
-          console.log("hello?")
+
           // add pricing below
           function rowPriceFunction(inputArray) {
             for(n = 0; n < inputArray.length; n++) {
@@ -106,7 +106,8 @@ $(function() {
               }
               table.append(priceRowStart);
           }};
-
+          console.log(rowPriceFunction)
+          console.log(rowWidthFunction)
           rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
