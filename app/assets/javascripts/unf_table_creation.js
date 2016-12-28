@@ -109,6 +109,7 @@ $(function() {
           console.log("hello")
           console.log(widths)
           console.log(heights)
+          console.log(gon.unf_prices)
           rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
