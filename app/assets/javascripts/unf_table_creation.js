@@ -100,8 +100,9 @@ $(function() {
               priceRowStart = priceRowStart + "<td><b>" + heights[n] + "\"</b></td>";
 
               for(x = 0; x < prices.length; x++) {
-                var price = Math.round(prices[x] * 50)
-                priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
+                var priceVar = Math.round(prices[x] * 50)
+                console.log(priceVar)
+                priceRowStart = priceRowStart + "<td>" + priceVar + ".99</td>";
               }
               table.append(priceRowStart);
           }};
