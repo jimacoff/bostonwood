@@ -98,11 +98,11 @@ $(function() {
               var prices = gon.unf_prices[n];
               var priceRowStart = "<tr style='text-align:center;'>";
               priceRowStart = priceRowStart + "<td><b>" + heights[n] + "\"</b></td>";
-
+              console.log("hi!")
               for(x = 0; x < prices.length; x++) {
-                var priceVar = Math.round(prices[x] * 50)
-                console.log(priceVar)
-                priceRowStart = priceRowStart + "<td>" + priceVar + ".99</td>";
+                var price = Math.round(prices[x] * 50)
+                console.log(price)
+                priceRowStart = priceRowStart + "<td>" + price + ".00</td>";
               }
               table.append(priceRowStart);
           }};
