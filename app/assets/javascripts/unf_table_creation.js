@@ -94,7 +94,9 @@ $(function() {
 
           // add pricing below
           function rowPriceFunction(inputArray) {
+            console.log("test")
             for(n = 0; n < inputArray.length; n++) {
+              console.log("second test")
               var prices = gon.unf_prices[n];
               var priceRowStart = "<tr style='text-align:center;'>";
               priceRowStart = priceRowStart + "<td><b>" + heights[n] + "\"</b></td>";
@@ -107,10 +109,7 @@ $(function() {
               table.append(priceRowStart);
           }};
           console.log("hello")
-          console.log(widths)
-          console.log(heights)
-          console.log(gon.unf_prices)
-          debugger;
+
           rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
