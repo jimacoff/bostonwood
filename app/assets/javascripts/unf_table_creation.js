@@ -106,10 +106,7 @@ $(function() {
               }
               table.append(priceRowStart);
           }};
-          console.log(rowPriceFunction)
-          console.log(rowWidthFunction)
-          console.log(widths)
-          console.log(heights)
+          console.log("hello")
           rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
