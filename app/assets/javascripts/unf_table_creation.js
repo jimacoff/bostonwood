@@ -115,6 +115,7 @@ $(function() {
       }
 
       if (builder.name === "Evergreen") {
+        console.log(builder.name)
           // add header to table
           var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
           table.append(header);
