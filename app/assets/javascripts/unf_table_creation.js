@@ -108,7 +108,7 @@ $(function() {
           }};
           console.log("hello")
           console.log(widths)
-          console.logg(heights)
+          console.log(heights)
           rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
