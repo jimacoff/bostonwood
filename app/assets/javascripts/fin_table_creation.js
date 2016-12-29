@@ -76,7 +76,7 @@ $(function() {
           table.append(header);
 
           // add widths to top of table
-          function rowWidthFunction(inputArray) {
+          var rowWidthFunction = function(inputArray) {
             var widthRowStart = "<tr style='text-align:center; border-bottom:1px solid #439B4F;'><td></td>";
             for(i = 0; i < inputArray.length; i++) {
               widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "\"</b></td>";
@@ -86,7 +86,7 @@ $(function() {
           }
 
           // add pricing below
-          function rowPriceFunction(inputArray) {
+          var rowPriceFunction = function(inputArray) {
             for(n = 0; n < (inputArray.length); n++) {
               var prices = gon.unf_prices[n];
               var priceRowStart = "<tr style='text-align:center;'>";

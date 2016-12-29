@@ -80,7 +80,7 @@ $(function() {
 
       if (builder.name !== "Evergreen" && widths[0] !== "Size") {
           // add header to table
-          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>" + builder.name + "Unfinished Pricing</th></tr></thead>");
+          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
           table.append(header);
 
           // add widths to top of table
@@ -95,14 +95,13 @@ $(function() {
           rowWidthFunction(widths);
           // add pricing below
           var rowPriceFunction = function(inputArray) {
-            console.log("test")
             for(n = 0; n < inputArray.length; n++) {
               var prices = gon.unf_prices[n];
               var priceRowStart = "<tr style='text-align:center;'>";
               priceRowStart = priceRowStart + "<td><b>" + heights[n] + "\"</b></td>";
               for(x = 0; x < prices.length; x++) {
                 var price = Math.round(prices[x] * .75)
-                priceRowStart = priceRowStart + "<td>" + price + ".00</td>";
+                priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
               }
               table.append(priceRowStart);
           }};
