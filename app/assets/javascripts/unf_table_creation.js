@@ -84,7 +84,7 @@ $(function() {
           table.append(header);
 
           // add widths to top of table
-          function rowWidthFunction(inputArray) {
+          var rowWidthFunction = function(inputArray) {
             var widthRowStart = "<tr style='text-align:center; border-bottom:1px solid #439B4F;'><td></td>";
             for(i = 0; i < inputArray.length; i++) {
               widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "\"</b></td>";
@@ -92,36 +92,31 @@ $(function() {
             widthRowStart = widthRowStart + "</tr>";
             table.append(widthRowStart);
           }
-
+          rowWidthFunction(widths);
           // add pricing below
-          function rowPriceFunction(inputArray) {
+          var rowPriceFunction = function(inputArray) {
             console.log("test")
             for(n = 0; n < inputArray.length; n++) {
-              console.log("second test")
               var prices = gon.unf_prices[n];
               var priceRowStart = "<tr style='text-align:center;'>";
               priceRowStart = priceRowStart + "<td><b>" + heights[n] + "\"</b></td>";
-              console.log("hi!")
               for(x = 0; x < prices.length; x++) {
-                var price = Math.round(prices[x] * 50)
-                console.log(price)
+                var price = Math.round(prices[x] * .75)
                 priceRowStart = priceRowStart + "<td>" + price + ".00</td>";
               }
               table.append(priceRowStart);
           }};
-
-          rowWidthFunction(widths);
           rowPriceFunction(heights);
       }
 
       if (builder.name === "Evergreen") {
-        console.log(builder.name)
+
           // add header to table
           var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
           table.append(header);
 
           // add widths to top of table
-          function rowWidthFunction(inputArray) {
+          var rowWidthFunction = function(inputArray) {
             var widthRowStart = "<tr style='text-align:center; border-bottom:1px solid #439B4F;'><td></td>";
             for(i = 0; i < inputArray.length; i++) {
               widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "\"</b></td>";
@@ -132,8 +127,7 @@ $(function() {
           rowWidthFunction(widths);
 
           // add pricing below
-          function rowPriceFunction(inputArray) {
-            console.log("test1")
+          var rowPriceFunction = function(inputArray) {
             for(n = 0; n < inputArray.length; n++) {
               var prices = gon.unf_prices[n];
               var priceRowStart = "<tr style='text-align:center;'>";
