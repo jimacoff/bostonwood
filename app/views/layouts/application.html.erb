@@ -29,7 +29,8 @@
         <%= link_to 'home', root_path %><br />
         <%= link_to 'locations', site_locations_path(1) %>
         <hr>
-        <% Category.all.each do |category| %>
+        <% sorted_category = Category.all.sort_by {|cat| cat.name.downcase} %>
+        <% sorted_category.each do |category| %>
           <%= link_to category.name, category_path(category.id) %><br />
         <% end %>
         <hr>
