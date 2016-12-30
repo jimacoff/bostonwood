@@ -33,8 +33,6 @@
         <% sorted_category.each do |category| %>
           <%= link_to category.name, category_path(category.id) %><br />
         <% end %>
-        <hr>
-        <%= link_to "admin sign in", new_admin_session_path %>
       </ul>
     </div>
     <div class="main small-12 medium-10 columns">
