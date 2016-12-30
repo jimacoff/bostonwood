@@ -20,6 +20,13 @@
   height: 100%;
   position: fixed;
   z-index: 1;
+  transition: all 0.5s;
+  width: 200px;
+}
+
+.sidebar.smaller {
+  padding-top: 75px;
+  transition: all 0.5s;
 }
 
 .sidebar a {
@@ -39,12 +46,14 @@
 
 .top-header {
   background: white;
+  height: 100px;
   width: 100%;
   text-align: center;
   padding: 5px;
   position: fixed;
   z-index: 100;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.5s;
 }
 
 .top-header h1 {
@@ -52,6 +61,16 @@
   font-family: 'Sanchez', serif;
   color: #439B4F;
   text-shadow: 2px 2px black;
+  transition: all 0.5s;
+}
+
+.top-header.smaller {
+  height: 50px;
+}
+
+.top-header.smaller h1 {
+  font-size: 2em;
+  text-shadow: none;
 }
 
 .main {
