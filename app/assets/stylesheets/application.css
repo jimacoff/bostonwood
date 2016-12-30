@@ -38,18 +38,19 @@
 }
 
 .top-header {
-  background: #439B4F;
+  background: white;
   width: 100%;
   text-align: center;
   padding: 5px;
   position: fixed;
   z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .top-header h1 {
   font-size: 4em;
   font-family: 'Sanchez', serif;
-  color: white;
+  color: #439B4F;
   text-shadow: 2px 2px black;
 }
 
