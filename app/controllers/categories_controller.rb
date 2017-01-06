@@ -31,44 +31,43 @@ class CategoriesController < ApplicationController
     @penns_products = []
     working_products = @category.products
     working_products.each_with_index do |product, index|
-      if index == 0
-        puts product
-        puts product.builder
-        puts product.builder.name
-        if product.builder.name == "Evergreen"
-            @eg_products.push(product)
-          elsif product.builder.name == "Berkshire"
-            @bk_products.push(product)
-          elsif product.builder.name == "Archbold"
-            @arch_products.push(product)
-          else
-            @penns_products.push(product)
-        end
-      elsif product.name.split(" ")[0].to_i > @eg_products.last.name.split(" ")[0].to_i
-        if product.builder.name == "Evergreen"
-            @eg_products << product
-          elsif product.builder.name == "Berkshire"
-            @bk_products << product
-          elsif product.builder.name == "Archbold"
-            @arch_products << product
-          else
-            @penns_products << product
-        end
-      else
-        working_products.each_with_index do |check, index|
-          if product.name.split(" ")[0].to_i <= check.name.split(" ")[0].to_i
-            if product.builder.name == "Evergreen"
-                @eg_products.insert(index, product)
-              elsif product.builder.name == "Berkshire"
-                @bk_products.insert(index, product)
-              elsif product.builder.name == "Archbold"
-                @arch_products.insert(index, product)
-              else
-                @penns_products.insert(index, product)
+      if product.builder.name != nil
+        if index == 0
+          if product.builder.name == "Evergreen"
+              @eg_products.push(product)
+            elsif product.builder.name == "Berkshire"
+              @bk_products.push(product)
+            elsif product.builder.name == "Archbold"
+              @arch_products.push(product)
+            else
+              @penns_products.push(product)
+          end
+        elsif product.name.split(" ")[0].to_i > @eg_products.last.name.split(" ")[0].to_i
+          if product.builder.name == "Evergreen"
+              @eg_products << product
+            elsif product.builder.name == "Berkshire"
+              @bk_products << product
+            elsif product.builder.name == "Archbold"
+              @arch_products << product
+            else
+              @penns_products << product
+          end
+        else
+          working_products.each_with_index do |check, index|
+            if product.name.split(" ")[0].to_i <= check.name.split(" ")[0].to_i
+              if product.builder.name == "Evergreen"
+                  @eg_products.insert(index, product)
+                elsif product.builder.name == "Berkshire"
+                  @bk_products.insert(index, product)
+                elsif product.builder.name == "Archbold"
+                  @arch_products.insert(index, product)
+                else
+                  @penns_products.insert(index, product)
+              end
+              break
+            else
+              next
             end
-            break
-          else
-            next
           end
         end
       end
