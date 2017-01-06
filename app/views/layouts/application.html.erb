@@ -22,6 +22,8 @@
     </a>
     <div class="sidebar small-12 medium-2 columns">
       <ul class="side-nav" role="navigation" title="Category List">
+        <img src="/images/mini_logo.jpg" href="/" class="top-logo"/>
+        <br />
         <% if current_admin != nil %>
           <%= link_to "sign out of admin", destroy_admin_session_path, method: :delete %><br />
           <%= link_to "+ new builder", new_builder_path %><br />
