@@ -28,9 +28,16 @@
           <%= link_to "+ new category", new_category_path %>
           <hr>
         <% end %>
-        <%= link_to 'home', root_path %><br />
-        <%= link_to 'locations', site_locations_path(1) %>
-        <hr>
+        <a href="/" class="top-link">
+          <i class="fa fa-home top-icon" aria-hidden="true"></i>
+          HOME
+        </a>
+        <br />
+        <a href="/site/1/locations" class="top-link">
+          <i class="fa fa-map-marker top-icon" aria-hidden="true"></i>
+          LOCATIONS
+        </a>
+        <br/><br/>
         <% sorted_category = Category.all.sort_by {|cat| cat.name.downcase} %>
         <% sorted_category.each do |category| %>
           <%= link_to category.name, category_path(category.id) %><br />
