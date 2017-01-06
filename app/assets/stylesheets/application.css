@@ -98,30 +98,29 @@
 }
 
 .product-row a {
-  transition: all 0.25s, ease;
+  transition: all 0.1s, ease;
   color: black;
 }
 
 .product-row a:hover {
-  transition: all 0.25s, ease;
+  transition: all 0.1s, ease;
   color: #439B4F;
 }
 
 .product-thumbnail {
   margin: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
-  transition: all 0.25s, ease;
+  transition: all 0.1s, ease;
 }
 
 .product-thumbnail:hover {
   margin: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.2);
-  transition: all 0.25s, ease;
+  transition: all 0.1s, ease;
 }
 
 .product-text {
-  padding-left: 50px;
-  text-align: left;
+  text-align: center;
 }
 
 .product-description {
