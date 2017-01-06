@@ -4,6 +4,7 @@
     <% @eg_products.each_with_index do |product, index| %>
       <% if index >= 12 %>
         <h3>test</h3>
+        <% break %>
       <% else %>
         <a href="<%= @category.id %>/products/<%= product.id %>">
           <div class="category-product small-12 medium-3 columns">
@@ -34,6 +35,7 @@
     <% @bk_products.each_with_index do |product, index| %>
       <% if index >= 12 %>
         <h3>test</h3>
+        <% break %>
       <% else %>
         <a href="<%= @category.id %>/products/<%= product.id %>">
           <div class="category-product small-12 medium-3 columns">
