@@ -41,6 +41,10 @@ class CategoriesController < ApplicationController
           @penns_products << product
       end
     end
+    @eg_products = @eg_products.sort_by! { |m| m.name }.reverse
+    @bk_products = @bk_products.sort_by! { |m| m.name }.reverse
+    @arch_products = @arch_products.sort_by! { |m| m.name }.reverse
+    @penns_products = @penns_products.sort_by! { |m| m.name }.reverse
   end
 
   def edit
