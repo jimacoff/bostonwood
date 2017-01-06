@@ -41,11 +41,6 @@ class CategoriesController < ApplicationController
           @penns_products << product
       end
     end
-    @bk_products.each do |check|
-      if check.name.split("-")[0] == "Design"
-        @bk_products.last == check
-      end
-    end
   end
 
   def edit
