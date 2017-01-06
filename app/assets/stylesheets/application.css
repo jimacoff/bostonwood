@@ -44,7 +44,7 @@
 
 .sidebar a {
   transition: color 0.25s, ease;
-  font-size: 1em;
+  font-size: .8em;
   color: black;
 }
 
