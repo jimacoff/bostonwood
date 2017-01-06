@@ -2,32 +2,24 @@
   <h2 class="builder-title">Evergreen Furniture</h2>
   <div class="row product-row">
     <% @eg_products.each_with_index do |product, index| %>
-      <% if index == 12 %>
-        <div class="view-more">
-          <i class="fa fa-plus" aria-hidden="true"></i>
-          view more
-        </div>
-        <% break %>
-      <% else %>
-        <a href="<%= @category.id %>/products/<%= product.id %>">
-          <div class="category-product small-12 medium-3 columns">
-            <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
-            <div class="row product-text">
-              <b><%= product.name %></b><br />
-              <% if product.unfinished_prices != nil %>
-              <%
-                if product.builder.name != "Evergreen"
-                  starting_at = (product.unfinished_prices["0"].first.to_i * 3/4)
-                else
-                  starting_at = product.unfinished_prices["0"].first
-                end
-              %>
-                Starting At: $<%= starting_at %>.99
-              <% end %>
-            </div>
+      <a href="<%= @category.id %>/products/<%= product.id %>">
+        <div class="category-product small-12 medium-3 columns">
+          <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
+          <div class="row product-text">
+            <b><%= product.name %></b><br />
+            <% if product.unfinished_prices != nil %>
+            <%
+              if product.builder.name != "Evergreen"
+                starting_at = (product.unfinished_prices["0"].first.to_i * 3/4)
+              else
+                starting_at = product.unfinished_prices["0"].first
+              end
+            %>
+              Starting At: $<%= starting_at %>.99
+            <% end %>
           </div>
-        </a>
-      <% end %>
+        </div>
+      </a>
     <% end %>
   </div>
 <% end %>
@@ -36,32 +28,24 @@
   <h2 class="builder-title">Berkshire Furniture</h2>
   <div class="row product-row">
     <% @bk_products.each_with_index do |product, index| %>
-      <% if index == 12 %>
-        <div class="view-more">
-          <i class="fa fa-plus" aria-hidden="true"></i>
-          view more
-        </div>
-        <% break %>
-      <% else %>
-        <a href="<%= @category.id %>/products/<%= product.id %>">
-          <div class="category-product small-12 medium-3 columns">
-            <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
-            <div class="row product-text">
-              <b><%= product.name %></b><br />
-              <% if product.unfinished_prices != nil %>
-              <%
-                if product.builder.name != "Evergreen"
-                  starting_at = (product.unfinished_prices["0"].first.to_i * 3/4)
-                else
-                  starting_at = product.unfinished_prices["0"].first
-                end
-              %>
-                Starting At: $<%= starting_at %>.99
-              <% end %>
-            </div>
+      <a href="<%= @category.id %>/products/<%= product.id %>">
+        <div class="category-product small-12 medium-3 columns">
+          <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
+          <div class="row product-text">
+            <b><%= product.name %></b><br />
+            <% if product.unfinished_prices != nil %>
+            <%
+              if product.builder.name != "Evergreen"
+                starting_at = (product.unfinished_prices["0"].first.to_i * 3/4)
+              else
+                starting_at = product.unfinished_prices["0"].first
+              end
+            %>
+              Starting At: $<%= starting_at %>.99
+            <% end %>
           </div>
-        </a>
-      <% end %>
+        </div>
+      </a>
     <% end %>
   </div>
 <% end %>
