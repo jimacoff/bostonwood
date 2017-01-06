@@ -34,6 +34,7 @@ class CategoriesController < ApplicationController
       if index == 0
         puts product
         puts product.builder
+        puts product.builder.name
         if product.builder.name == "Evergreen"
             @eg_products.push(product)
           elsif product.builder.name == "Berkshire"
