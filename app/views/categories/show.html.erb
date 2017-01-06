@@ -2,7 +2,7 @@
   <h2 class="builder-title">Evergreen Furniture</h2>
   <div class="row product-row">
     <% @eg_products.each_with_index do |product, index| %>
-      <% if index >= 12 %>
+      <% if index == 12 %>
         <h3>test</h3>
         <% break %>
       <% else %>
@@ -33,7 +33,7 @@
   <h2 class="builder-title">Berkshire Furniture</h2>
   <div class="row product-row">
     <% @bk_products.each_with_index do |product, index| %>
-      <% if index >= 12 %>
+      <% if index == 12 %>
         <h3>test</h3>
         <% break %>
       <% else %>
