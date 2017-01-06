@@ -174,7 +174,6 @@
 
 #homepage {
   display: block;
-  margin: auto;
 }
 
 .image-text {
@@ -186,7 +185,7 @@
 .homepage-image {
   opacity: 1;
   transition: opacity .25s ease;
-  height: 15vw;
+  height: 40vh;
   border: 1px solid #439B4F;
  }
 /*
