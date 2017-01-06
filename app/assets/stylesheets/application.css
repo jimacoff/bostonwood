@@ -134,6 +134,11 @@
   transition: all 0.1s, ease;
 }
 
+.view-more {
+  background: #439B4F;
+  border-radius: 2px;
+}
+
 .product-text {
   text-align: center;
 }

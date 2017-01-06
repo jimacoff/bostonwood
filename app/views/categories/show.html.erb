@@ -3,7 +3,10 @@
   <div class="row product-row">
     <% @eg_products.each_with_index do |product, index| %>
       <% if index == 12 %>
-        <h3>test</h3>
+        <div class="view-more">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+          view more
+        </div>
         <% break %>
       <% else %>
         <a href="<%= @category.id %>/products/<%= product.id %>">
