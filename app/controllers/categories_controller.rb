@@ -25,17 +25,44 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @products = []
+    @eg_products = []
+    @bk_products = []
+    @arch_products = []
+    @penns_products = []
     working_products = @category.products
     working_products.each_with_index do |product, index|
       if index == 0
-        @products.push(product)
-      elsif product.name.split(" ")[0].to_i > @products.last.name.split(" ")[0].to_i
-        @products << product
+        if product.builder.name == "Evergreen"
+            @eg_products.push(product)
+          elsif product.builder.name == "Berkshire"
+            @bk_products.push(product)
+          elsif product.builder.name == "Archbold"
+            @arch_products.push(product)
+          else
+            @penns_products.push(product)
+        end
+      elsif product.name.split(" ")[0].to_i > @eg_products.last.name.split(" ")[0].to_i
+        if product.builder.name == "Evergreen"
+            @eg_products << product
+          elsif product.builder.name == "Berkshire"
+            @bk_products << product
+          elsif product.builder.name == "Archbold"
+            @arch_products << product
+          else
+            @penns_products << product
+        end
       else
-        @products.each_with_index do |check, index|
+        working_products.each_with_index do |check, index|
           if product.name.split(" ")[0].to_i <= check.name.split(" ")[0].to_i
-            @products.insert(index, product)
+            if product.builder.name == "Evergreen"
+                @eg_products.insert(index, product)
+              elsif product.builder.name == "Berkshire"
+                @bk_products.insert(index, product)
+              elsif product.builder.name == "Archbold"
+                @arch_products.insert(index, product)
+              else
+                @penns_products.insert(index, product)
+            end
             break
           else
             next
