@@ -32,6 +32,8 @@ class CategoriesController < ApplicationController
     working_products = @category.products
     working_products.each_with_index do |product, index|
       if index == 0
+        puts product
+        puts product.builder
         if product.builder.name == "Evergreen"
             @eg_products.push(product)
           elsif product.builder.name == "Berkshire"
