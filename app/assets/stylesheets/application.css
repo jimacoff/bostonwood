@@ -97,9 +97,26 @@
   margin-bottom: 30px;
 }
 
+.product-row a {
+  transition: all 0.25s, ease;
+  color: black;
+}
+
+.product-row a:hover {
+  transition: all 0.25s, ease;
+  color: #439B4F;
+}
+
 .product-thumbnail {
   margin: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.25s, ease;
+}
+
+.product-thumbnail:hover {
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.25s, ease;
 }
 
 .product-text {
