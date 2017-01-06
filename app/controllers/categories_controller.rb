@@ -41,10 +41,6 @@ class CategoriesController < ApplicationController
           @penns_products << product
       end
     end
-    @eg_products = @eg_products.sort_by! { |m| m.name }
-    @bk_products = @bk_products.sort_by! { |m| m.name }
-    @arch_products = @arch_products.sort_by! { |m| m.name }
-    @penns_products = @penns_products.sort_by! { |m| m.name }
   end
 
   def edit
