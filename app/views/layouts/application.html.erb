@@ -29,11 +29,11 @@
           <hr>
         <% end %>
         <a href="/" class="top-link">
-          HOME
+          <b>HOME</b>
         </a>
         <br />
         <a href="/site/1/locations" class="top-link">
-          LOCATIONS
+          <b>LOCATIONS</b>
         </a>
         <br/><br/>
         <% sorted_category = Category.all.sort_by {|cat| cat.name.downcase} %>
