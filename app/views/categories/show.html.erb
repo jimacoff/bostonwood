@@ -1,5 +1,4 @@
 <% if @eg_products != [] %>
-  <h2 class="builder-title">Evergreen Furniture</h2>
   <div class="row product-row">
     <% @eg_products.each_with_index do |product, index| %>
       <a href="<%= @category.id %>/products/<%= product.id %>">
@@ -8,7 +7,7 @@
             <img src="<%= product.image_url(:thumbnail) %>" />
           </div>
           <div class="row product-text">
-            <b><%= product.name %></b><br />
+            <b><%= product.builder.name.split(" ")[0]%> <%= product.name %></b><br />
             <% if product.unfinished_prices != nil %>
             <%
               if product.builder.name != "Evergreen"
@@ -27,7 +26,6 @@
 <% end %>
 
 <% if @bk_products != [] %>
-  <h2 class="builder-title">Berkshire Furniture</h2>
   <div class="row product-row">
     <% @bk_products.each_with_index do |product, index| %>
       <% if product.name.split("-")[0] == "Design" %>
@@ -43,7 +41,7 @@
               <img src="<%= product.image_url(:thumbnail) %>" />
             </div>
             <div class="row product-text">
-              <b><%= product.name %></b><br />
+              <b><%= product.builder.name.split(" ")[0]%> <%= product.name %></b><br />
               <% if product.unfinished_prices != nil %>
               <%
                 if product.builder.name != "Evergreen"
@@ -63,7 +61,6 @@
 <% end %>
 
 <% if @arch_products != [] %>
-  <h2 class="builder-title">Archbold Furniture</h2>
   <div class="row product-row">
     <% @arch_products.each do |product| %>
     <a href="<%= @category.id %>/products/<%= product.id %>">
@@ -72,7 +69,7 @@
           <img src="<%= product.image_url(:thumbnail) %>" />
         </div>
         <div class="row product-text">
-          <b><%= product.name %></b><br />
+          <b><%= product.builder.name.split(" ")[0]%> <%= product.name %></b><br />
           <% if product.unfinished_prices != nil %>
           <%
             if product.builder.name != "Evergreen"
@@ -91,7 +88,6 @@
 <% end %>
 
 <% if @penns_products != [] %>
-  <h2 class="builder-title">Penns Creek Furniture</h2>
   <div class="row product-row">
     <% @penns_products.each do |product| %>
     <a href="<%= @category.id %>/products/<%= product.id %>">
@@ -100,7 +96,7 @@
           <img src="<%= product.image_url(:thumbnail) %>" />
         </div>
         <div class="row product-text">
-          <b><%= product.name %></b><br />
+          <b><%= product.builder.name.split(" ")[0..1]%> <%= product.name %></b><br />
           <% if product.unfinished_prices != nil %>
           <%
             if product.builder.name != "Evergreen"
