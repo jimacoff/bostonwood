@@ -21,6 +21,7 @@
   background: white;
   padding: 0px;
   padding-left: 25px;
+  padding-top: 100px;
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -39,7 +40,8 @@
   /*margin: 10px;*/
 }
 
-.sidebar.smaller a {
+.sidebar.smaller {
+  padding-top: 50px;
   transition: all 0.5s;
 }
 
