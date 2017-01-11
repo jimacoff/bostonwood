@@ -210,7 +210,8 @@
 }
 
 #homepage {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .image-text {
@@ -222,8 +223,10 @@
 .homepage-image {
   opacity: 1;
   transition: opacity .25s ease;
-  height: 40vh;
+  width: 35em;
+  height: 25vh;
   border: 1px solid #439B4F;
+  margin: 5px;
  }
 /*
  .homepage-image:hover {
