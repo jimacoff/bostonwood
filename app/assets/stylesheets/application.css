@@ -33,9 +33,9 @@
 }
 
 .top-link {
-color: #439B4F;
-margin: auto;
-transition: color 0.25s, ease;
+  color: #439B4F;
+  margin: auto;
+  transition: color 0.25s, ease;
 }
 
 .top-link:hover {
