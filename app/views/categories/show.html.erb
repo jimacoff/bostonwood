@@ -3,7 +3,7 @@
   <div class="row product-row">
     <% @eg_products.each_with_index do |product, index| %>
       <a href="<%= @category.id %>/products/<%= product.id %>">
-        <div class="category-product small-12 medium-2 columns">
+        <div class="category-product small-12 medium-3 columns">
           <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
           <div class="row product-text">
             <b><%= product.name %></b><br />
@@ -36,7 +36,7 @@
         </a>
       <% else %>
         <a href="<%= @category.id %>/products/<%= product.id %>">
-          <div class="category-product small-12 medium-2 columns">
+          <div class="category-product small-12 medium-3 columns">
             <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
             <div class="row product-text">
               <b><%= product.name %></b><br />
@@ -63,7 +63,7 @@
   <div class="row product-row">
     <% @arch_products.each do |product| %>
     <a href="<%= @category.id %>/products/<%= product.id %>">
-      <div class="category-product small-12 medium-2 columns">
+      <div class="category-product small-12 medium-3 columns">
         <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
         <div class="row product-text">
           <b><%= product.name %></b><br />
@@ -89,7 +89,7 @@
   <div class="row product-row">
     <% @penns_products.each do |product| %>
     <a href="<%= @category.id %>/products/<%= product.id %>">
-      <div class="category-product small-12 medium-2 columns">
+      <div class="category-product small-12 medium-3 columns">
         <%= image_tag product.image_url(:thumbnail), class:"product-thumbnail" %><br />
         <div class="row product-text">
           <b><%= product.name %></b><br />
