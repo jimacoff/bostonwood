@@ -114,9 +114,9 @@
 .category-product {
   text-align: center;
   margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
   transition: all 0.1s, ease;
   height: 27vh;
+  padding: 5px;
 }
 
 .product-row a {
@@ -127,11 +127,7 @@
 
 .product-thumbnail {
   margin: 5px;
-}
-
-.category-product:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.2);
-  transition: all 0.1s, ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .design-your-own {
