@@ -33,11 +33,14 @@
 }
 
 .top-link {
-  margin: auto;
+color: #439B4F;
+margin: auto;
+transition: color 0.25s, ease;
 }
 
-.top-icon {
-  /*margin: 10px;*/
+.top-link:hover {
+  color: black;
+  transition: color 0.25s, ease;
 }
 
 .sidebar.smaller {
