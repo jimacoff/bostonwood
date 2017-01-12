@@ -51,7 +51,7 @@
 
 .sidebar a {
   transition: color 0.25s, ease;
-  font-size: .8em;
+  font-size: .7em;
   color: black;
 }
 
@@ -223,8 +223,8 @@
 
 .homepage-image {
   opacity: 1;
-  width: 35em;
-  height: 25vh;
+  width: 23em;
+  height: 40vh;
   border: 1px solid #439B4F;
   margin: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
