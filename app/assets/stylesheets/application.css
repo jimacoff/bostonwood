@@ -27,7 +27,7 @@
   position: fixed;
   z-index: 1;
   transition: all 0.5s;
-  width: 200px;
+  width: 250px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@
 
 .sidebar a {
   transition: color 0.25s, ease;
-  font-size: .7em;
+  font-size: .9em;
   color: black;
 }
 
@@ -234,6 +234,7 @@
 }
 
 .image-text {
+  font-size: 1.2em;
   padding: 5px;
   opacity: 1;
   text-align: center;
