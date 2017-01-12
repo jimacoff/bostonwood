@@ -30,8 +30,11 @@
     <% @bk_products.each_with_index do |product, index| %>
       <% if product.name.split("-")[0] == "Design" %>
         <a href="<%= @category.id %>/products/<%= product.id %>">
-          <div class="category-product design-your-own small-12 columns end">
-            <b><%= product.name %></b><br />
+          <div class="category-product dyo small-12 medium-3 columns">
+            <div class="design-your-own">
+              <b><%= product.name %> </b><br />
+              <i class="fa fa-arrow-circle-right fa-2x icon" aria-hidden="true"></i>
+            </div>
           </div>
         </a>
       <% else %>
