@@ -177,6 +177,7 @@
 }
 
 .product-description p {
+  font-size: .8em;
   white-space: pre-wrap;
   margin-top: 20px;
 }
@@ -248,7 +249,7 @@
 }
 
 .color-div h4 {
-  font-size: 14px;
+  font-size: .8em;
   display: inline-flex;
 }
 
@@ -263,6 +264,7 @@
 }
 
 .unfinished-pricing-table {
+  font-size: .8em;
   margin-top: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
