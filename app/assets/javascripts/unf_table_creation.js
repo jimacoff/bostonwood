@@ -23,7 +23,6 @@ $(function() {
 
       // add pricing below
       var rowPriceFunction = function(inputArray) {
-        console.log("test2")
         for(n = 0; n < inputArray.length; n++) {
           var prices = gon.unf_prices[n];
           var priceRowStart = "<tr style='text-align:center;'>";
