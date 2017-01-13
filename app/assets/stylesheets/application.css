@@ -264,11 +264,12 @@
 }
 
 .color-div {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   width: 9%;
   display: inline-block;
   justify-content: space-between;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .color-div h4 {
@@ -290,6 +291,7 @@
   font-size: .8em;
   margin-top: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
 }
 
 .unfinished-pricing-table th {
