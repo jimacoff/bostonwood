@@ -7,10 +7,6 @@ $(function() {
     var builder = gon.builder;
     var table = $("#unfinished-pricing-table-" + product.id);
 
-    if (gon.unf_prices === null) {
-      return ""
-    }
-
     if (builder.name !== "Evergreen" && widths[0] === "Size") {
 
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
