@@ -29,7 +29,7 @@ $(function() {
           priceRowStart = priceRowStart + "<td>" + heights[n].split("_").join(" ") + "</td>";
 
           for(x = 0; x < prices.length; x++) {
-            priceRowStart = priceRowStart + "<td>" + (prices[x] * .75) + ".99</td>";
+            priceRowStart = priceRowStart + "<td>" + prices[x] + ".99</td>";
           }
           table.append(priceRowStart);
       }};
