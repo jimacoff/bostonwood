@@ -43,7 +43,7 @@ $(function() {
 
     }
 
-    if (widths[0] === "Size") {
+    if (builder.name === "Evergreen" && widths[0] === "Size") {
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
         table.append(header);
         // add widths to top of table
@@ -107,7 +107,7 @@ $(function() {
           rowPriceFunction(heights);
       }
 
-      if (builder.name === "Evergreen") {
+      if (builder.name === "Evergreen" && widths[0] !== "Size") {
 
           // add header to table
           var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");

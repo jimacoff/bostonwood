@@ -29,7 +29,7 @@ $(function() {
           priceRowStart = priceRowStart + "<td>" + heights[n].split("_").join(" ") + "</td>";
 
           for(x = 0; x < prices.length; x++) {
-            priceRowStart = priceRowStart + "<td>" + prices[x] + ".99</td>";
+            priceRowStart = priceRowStart + "<td>" + (prices[x] * .75) + ".99</td>";
           }
           table.append(priceRowStart);
       }};
@@ -39,7 +39,7 @@ $(function() {
 
     }
 
-    if (widths[0] === "Size") {
+    if (builder.name === "Evergreen" && widths[0] === "Size") {
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
         table.append(header);
         // add widths to top of table
@@ -60,7 +60,7 @@ $(function() {
             priceRowStart = priceRowStart + "<td>" + heights[n].split("_").join(" ") + "</td>";
 
             for(x = 0; x < prices.length; x++) {
-              var price = Math.round(prices[x]);
+              var price = Math.round(prices[x] * 1.5);
               priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
             }
             table.append(priceRowStart);
@@ -70,7 +70,7 @@ $(function() {
         rowPriceFunction(heights);
       }
 
-      if (builder.name !== "Evergreen") {
+      if (builder.name !== "Evergreen" && widths[0] !== "Size") {
           // add header to table
           var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
           table.append(header);
@@ -104,7 +104,7 @@ $(function() {
           rowPriceFunction(heights);
       }
 
-      if (builder.name === "Evergreen") {
+      if (builder.name === "Evergreen" && widths[0] !== "Size") {
         // add header to table
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
         table.append(header);
