@@ -56,7 +56,7 @@ class Product < ApplicationRecord
         'Tobacco',
         'Black'
       ]
-    elsif builder == "Berkshire"
+    elsif builder == "Berkshire" || builder == "Archbold"
       [
         'Natural',
         'White',
