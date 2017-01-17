@@ -56,7 +56,7 @@ class Product < ApplicationRecord
         'Tobacco',
         'Black'
       ]
-    elsif builder == "Berkshire" || builder == "Archbold"
+    elsif builder == "Berkshire"
       [
         'Natural',
         'White',
@@ -83,6 +83,46 @@ class Product < ApplicationRecord
         'Parsley Snips',
         'Big Sky Blue',
         'Chili Pepper Red'
+      ]
+    elsif builder == "Archbold"
+      [
+        'Natural',
+        'Honey',
+        'Golden Pecan',
+        'Antique Cherry',
+        'Washington Cherry',
+        'Rich Cherry',
+        'Tuscan Brown',
+        'Brown Mahogany',
+        'Coffee',
+        'Driftwood',
+        'Snow White',
+        'Black'
+      ]
+    elsif builder == "Penns Creek"
+      [
+        'Natural',
+        'Sunrise',
+        'Harvest',
+        'Sealy',
+        'Royal',
+        'New Carrington',
+        'Heritage',
+        'Asbury',
+        'Acres',
+        'Charleston',
+        'American Traditional',
+        'Sand',
+        'Driftwood',
+        'White',
+        'Pearl',
+        'Buttermilk',
+        'Hearthside Red',
+        'Williamsburg Blue',
+        'Sage',
+        'Chelsea Gray',
+        'Charcoal',
+        'Eclipse Black'
       ]
     end
   end
