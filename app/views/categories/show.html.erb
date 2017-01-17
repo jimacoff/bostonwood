@@ -7,12 +7,7 @@
             <img src="<%= product.image_url(:thumbnail) %>" />
           </div>
           <div class="row product-text">
-            <% if product.builder.name.class == Array %>
-              <% builder_name = product.builder.name.join(" ") %>
-            <% else %>
-              <% builder_name = product.builder.name.split(" ")[0] %>
-            <% end %>
-            <b><%= builder_name %> <%= product.name %></b><br />
+            <b><%= product.builder.name%> <%= product.name %></b><br />
             <% if product.unfinished_prices != nil %>
             <%
               if product.builder.name != "Evergreen"
