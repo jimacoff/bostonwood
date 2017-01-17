@@ -10,8 +10,10 @@ $(function() {
     if (builder.name !== "Evergreen" && widths[0] === "Size") {
 
       if (builder.name === "Penns Creek") {
-        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead><tr colspan=" + (widths.length + 1) + ">Currently not offered unfinished</tr>");
+        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
+        var row = $("<tr><td colspan=" + (widths.length + 1) + ">Test info</td></tr>")
         table.append(header);
+        tables.append(row)
 
       } else {
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
