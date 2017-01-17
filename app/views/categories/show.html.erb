@@ -99,7 +99,7 @@
           <img src="<%= product.image_url(:thumbnail) %>" />
         </div>
         <div class="row product-text">
-          <b><%= product.builder.name.split(" ")[0..1]%> <%= product.name %></b><br />
+          <b><%= product.builder.name %> <%= product.name %></b><br />
           <% if product.unfinished_prices != nil %>
           <%
             if product.builder.name != "Evergreen"
