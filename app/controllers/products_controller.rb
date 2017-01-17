@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
       @category = Category.find(params[:category_id])
       @product = Product.new
     else
-      redirect_to root_path
+      redirect_to category_path(@category)
     end
   end
 
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
       @category = Category.find(params[:category_id])
       @product = @category.products.find(params[:id])
     else
-      redirect_to root_path
+      redirect_to category_path(@category)
     end
   end
 
