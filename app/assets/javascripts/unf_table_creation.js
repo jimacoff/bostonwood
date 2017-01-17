@@ -11,9 +11,9 @@ $(function() {
 
       if (builder.name === "Penns Creek") {
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
-        var row = $("<tr><td colspan=" + (widths.length + 1) + ">Test info</td></tr>")
+        var row = $("<tr><td colspan=" + (widths.length + 1) + "><b>Currently not available unfinished</b></td></tr>")
         table.append(header);
-        tables.append(row)
+        table.append(row)
 
       } else {
       var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
