@@ -6,9 +6,9 @@ function init() {
         hours = document.getElementsByClassName("hours")
         nav = document.getElementsByClassName("sidebar")
     if (distanceY > shrinkOn) {
-      header[0].className = "sidebar smaller";
+      header[0].className = "top-header smaller";
       nav[0].className = "sidebar smaller";
-      hours[0].className = "sidebar smaller"
+      hours[0].className = "hours smaller"
     } else {
       if (header[0].classList.contains("smaller")) {
         header[0].className = "top-header"
