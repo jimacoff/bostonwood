@@ -152,6 +152,10 @@
   transition: all 0.1s, ease;
 }
 
+.product-thumbnail img {
+  height: 100%;
+}
+
 .design-your-own {
   display: flex;
   width: 100%;
