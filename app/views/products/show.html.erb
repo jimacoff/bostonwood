@@ -8,6 +8,7 @@
       <p><%= @product.description %></p>
   </div>
 </div>
+
 <div class="row">
   <% if @product.builder.name != "Penns Creek" %>
     <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
@@ -21,15 +22,15 @@
       <% end %>
     </div>
   <% else %>
-  <div class="small-12 large-12 columns pricing" id="finished-pricing">
+  <div class="small-12 large-6 columns pricing" id="finished-pricing penns-grid">
     <% if @product.pricing_object != nil %>
       <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
       </table>
     <% end %>
   </div>
   <% end %>
-
 </div>
+
 <div class="row">
   <div class="small-12 columns finishes" id="unfinished-pricing">
     <% @colors.each do |color| %>

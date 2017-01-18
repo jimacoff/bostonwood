@@ -72,6 +72,10 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+.penns-grid {
+  display: flex;
+  justify-content: center;
+}
 
 .color-div {
   margin-bottom: 0px;
