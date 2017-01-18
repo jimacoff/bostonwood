@@ -123,10 +123,10 @@
 
 .category-product {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   transition: all 0.1s, ease;
   height: 27vh;
-  padding: 5px;
+  padding: 20px;
 }
 
 .category-product:hover .product-thumbnail{
@@ -150,10 +150,12 @@
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
   transition: all 0.1s, ease;
+  height: 225px;
 }
 
 .product-thumbnail img {
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .design-your-own {
