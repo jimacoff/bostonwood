@@ -7,12 +7,14 @@ function init() {
         hours = document.getElementsByClassName("hours")
         nav = document.getElementsByClassName("sidebar")
         flag = document.getElementsByClassName("flag-container")
+        flagImage = document.getElementsByClassName("flag-image")
     if (distanceY > shrinkOn) {
       bar[0].className = "top-header smaller"
       header[0].className = "header-center smaller";
       nav[0].className = "sidebar smaller";
       hours[0].className = "hours smaller"
       flag[0].className = "flag-container smaller"
+      flagImage[0].className = "flag-image smaller"
     } else {
       if (header[0].classList.contains("smaller")) {
         bar[0].className = "top-header"
@@ -20,6 +22,7 @@ function init() {
         nav[0].className = "sidebar"
         hours[0].className = "hours"
         flag[0].className = "flag-container"
+        flagImage[0].className = "flag-image"
       }
     }
   });

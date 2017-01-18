@@ -122,6 +122,11 @@
 .flag-image {
   height: 90px;
   padding-top: 20px;
+  transition: all 0.5s ease;
+}
+
+.flag-image.smaller {
+  transition: all 0.1s ease;
 }
 
 .top-header img {
@@ -178,11 +183,15 @@
 }
 
 .product-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
   transition: all 0.1s, ease;
   height: 225px;
+
 }
 
 .product-thumbnail img {
