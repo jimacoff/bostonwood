@@ -9,16 +9,26 @@
   </div>
 </div>
 <div class="row">
-  <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
-    <% if @product.pricing_object != nil %>
-      <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
-      </table>
+  <% if @product.builder !== "Penns Creek" %>
+    <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
+      <% if @product.pricing_object != nil %>
+        <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
+        </table>
+      </div>
+      <div class="small-12 large-6 columns pricing" id="finished-pricing">
+        <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
+        </table>
+      <% end %>
     </div>
-    <div class="small-12 large-6 columns pricing" id="finished-pricing">
+  <% else %>
+  <div class="small-12 large-12 columns pricing" id="finished-pricing">
+    <% if @product.pricing_object != nil %>
       <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
       </table>
     <% end %>
   </div>
+  <% end %>
+
 </div>
 <div class="row">
   <div class="small-12 columns finishes" id="unfinished-pricing">
