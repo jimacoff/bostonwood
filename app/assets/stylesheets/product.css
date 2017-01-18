@@ -73,7 +73,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .penns-grid {
-  padding-left: 0px;
+  margin-left: auto;
+  margin-right:auto;
 }
 
 .color-div {
@@ -115,7 +116,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #finished-pricing {
-  padding-left: 10px;
+  padding-left: 0px;
   padding-right: 0px;
 }
 
