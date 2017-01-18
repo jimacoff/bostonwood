@@ -73,8 +73,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .penns-grid {
-  display: flex;
-  justify-content: center;
+  
 }
 
 .color-div {
