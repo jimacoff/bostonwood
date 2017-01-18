@@ -1,0 +1,131 @@
+.product-description {
+  font-family: 'Biryani', sans-serif;
+  height: 400px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: white;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  width: 65%;
+  overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.product-description h2 {
+  color: #439B4F;
+  font-size: 24px;
+  white-space: pre-wrap;
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-description h3 {
+  color: black;
+  white-space: pre-wrap;
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-description p {
+  font-size: .8em;
+  white-space: pre-wrap;
+  margin-top: 20px;
+}
+
+.edit-product-image {
+  display: flex;
+  margin-bottom:10px;
+  padding: 0px;
+}
+
+.edit-product-image img {
+  max-height: auto;
+  max-width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.builder-title {
+  text-align: center;
+  color: #439B4F;
+  font-size: 24px;
+  white-space: pre-wrap;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.pricing {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+
+.color-div {
+  margin-bottom: 0px;
+  width: 9%;
+  display: inline-block;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.color-div h4 {
+  font-size: .8em;
+  display: inline-flex;
+}
+
+.color-image {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.1s, ease;
+}
+
+.color-image:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.1s, ease;
+  cursor: pointer;
+}
+
+.unfinished-pricing-table {
+  font-size: .8em;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.unfinished-pricing-table th {
+  background-color: #439B4F;
+  color: white;
+  width: 100%;
+}
+
+#finished-pricing {
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+#unfinished-pricing {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.finishes {
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}

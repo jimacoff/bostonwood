@@ -1,0 +1,69 @@
+.category-title {
+  text-align: center;
+}
+
+.category-product {
+  text-align: center;
+  transition: all 0.1s, ease;
+  padding: 20px;
+}
+
+.category-product:hover .product-thumbnail{
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.1s, ease;
+}
+
+.category-product:hover .product-text {
+  color: #439B4F;
+  transition: all 0.1s, ease;
+}
+
+.product-row a {
+  transition: all 0.1s, ease;
+  font-size: .8em;
+  color: black;
+}
+
+.product-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.1s, ease;
+  height: 200px;
+
+}
+
+.product-thumbnail img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.design-your-own {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  background-color: #439B4F;
+  color: white;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin: 10px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.product-text {
+  text-align: center;
+  transition: all 0.1s, ease;
+}
+
+.delete-link a {
+  color: #cc3d3d;
+}

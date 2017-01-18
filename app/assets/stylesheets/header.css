@@ -1,0 +1,103 @@
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #439B4F;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.hours {
+  opacity: 1;
+  width: 20%;
+  color: white;
+  text-align: left;
+  margin-left: 20px;
+  transition: all 0.5s ease;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+  top: 0px;
+  transition: top 0.5s ease;
+}
+
+.hours.smaller {
+  opacity: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  top: -20px;
+}
+
+.flag-container {
+  opacity: 1;
+  width: 10vw;
+  float: right;
+}
+
+.flag-container.smaller {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.flag {
+  width: 20%;
+  color: white;
+  text-align: left;
+  transition: all 0.5s ease;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+
+}
+
+.flag-container p {
+  text-align: left;
+  padding-right: 10px;
+  font-size: .8em;
+  position: relative;
+  top: 0px;
+  transition: top 0.5s ease;
+  letter-spacing: 2.5px;
+}
+
+.flag-image {
+  position: relative;
+  top: 0;
+  height: 90px;
+  padding-top: 20px;
+  transition: all 0.5s ease;
+}
+
+.flag-image.smaller {
+  position: relative;
+  top: -20px;
+  transition: top 0.5s ease;
+}
+
+.flag-container.smaller p {
+  position: relative;
+  top: -20px;
+  transition: top 0.5s ease;
+}
+
+.top-header img {
+  height: 90px;
+  transition: all 0.5s;
+}
+
+.top-header.smaller {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  height: 50px;
+  transition: all 0.5s ease;
+}
+
+.top-header.smaller h1 {
+  font-size: 2em;
+  text-shadow: none;
+}
+
+.header-center.smaller img {
+  height: 45px;
+  transition: all 0.5s;
+}
