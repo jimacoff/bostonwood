@@ -176,11 +176,6 @@
   text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.view-more {
-  background: #439B4F;
-  border-radius: 2px;
-}
-
 .product-text {
   text-align: center;
   transition: all 0.1s, ease;
@@ -276,10 +271,10 @@ body::-webkit-scrollbar-thumb {
 
 .homepage-image {
   opacity: 1;
-  width: 23em;
-  height: 40vh;
+  width: 20vw;
+  height: 36vh;
   border: 1px solid #439B4F;
-  margin: 15px;
+  margin: 30px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
   transition: all 0.1s, ease;
   text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
