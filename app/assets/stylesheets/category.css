@@ -6,6 +6,8 @@
   text-align: center;
   transition: all 0.1s, ease;
   padding: 20px;
+  height: 30vh;
+  margin-bottom: 10px;
 }
 
 .category-product:hover .product-thumbnail{
