@@ -93,6 +93,37 @@
   transition: all 0.5s ease;
 }
 
+.flag-container {
+  opacity: 1;
+  width: 10vw;
+  float: right;
+}
+
+.flag-container.smaller {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.flag {
+  width: 20%;
+  color: white;
+  text-align: left;
+  transition: all 0.5s ease;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+
+}
+
+.flag p {
+  text-align: left;
+  padding-right: 10px;
+  font-size: .8em;
+}
+
+.flag-image {
+  height: 90px;
+  padding-top: 20px;
+}
+
 .top-header img {
   height: 90px;
   transition: all 0.5s;
@@ -101,6 +132,7 @@
 .top-header.smaller {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
   height: 50px;
+  transition: all 0.5s ease;
 }
 
 .top-header.smaller h1 {
@@ -108,7 +140,7 @@
   text-shadow: none;
 }
 
-.top-header.smaller img {
+.header-center.smaller img {
   height: 45px;
   transition: all 0.5s;
 }
