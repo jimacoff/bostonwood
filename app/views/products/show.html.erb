@@ -47,22 +47,24 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="small-12 columns mto">
-    <h3>Placing A Custom Order</h3>
-    <div class="images">
-      <div class="color-div end">
-        <img src="/images/colors/test.png" />
-      </div>
-      <div class="color-div end">
-        <img src="/images/colors/test.png" />
-      </div>
-      <div class="color-div end">
-        <img src="/images/colors/test.png" />
+<% if @product.builder.name == "Evergreen" || @product.builder.name == "Berkshire" %>
+  <div class="row">
+    <div class="small-12 columns mto">
+      <h3>Placing A Custom Order</h3>
+      <div class="images">
+        <div class="color-div end">
+          <img src="/images/colors/test.png" />
+        </div>
+        <div class="color-div end">
+          <img src="/images/colors/test.png" />
+        </div>
+        <div class="color-div end">
+          <img src="/images/colors/test.png" />
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
 <% if current_admin != nil %>
   <%= link_to "edit product info", edit_category_product_path(@category, @product) %><br />
   <% if @product.pricing_object != nil %>
