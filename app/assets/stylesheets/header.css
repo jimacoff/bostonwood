@@ -24,6 +24,10 @@
   transition: top 0.5s ease;
 }
 
+.hours h3 {
+  font-size: 1vw;
+}
+
 .hours.smaller {
   opacity: 0;
   transition: all 0.5s ease;
@@ -53,8 +57,7 @@
 
 .flag-container p {
   text-align: left;
-  padding-right: 10px;
-  font-size: .8em;
+  font-size: .8vw;
   position: relative;
   top: 0px;
   transition: top 0.5s ease;
