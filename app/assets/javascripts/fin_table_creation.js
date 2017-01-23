@@ -29,7 +29,7 @@ $(function() {
           priceRowStart = priceRowStart + "<td>" + heights[n].split("_").join(" ") + "</td>";
 
           for(x = 0; x < prices.length; x++) {
-            priceRowStart = priceRowStart + "<td>" + prices[x] + ".99</td>";
+            priceRowStart = priceRowStart + "<td>$" + prices[x] + ".99</td>";
           }
           table.append(priceRowStart);
       }};
@@ -61,7 +61,7 @@ $(function() {
 
             for(x = 0; x < prices.length; x++) {
               var price = Math.round(prices[x] * 1.5);
-              priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
+              priceRowStart = priceRowStart + "<td>$" + price + ".99</td>";
             }
             table.append(priceRowStart);
         }};
@@ -94,7 +94,7 @@ $(function() {
 
               for(x = 0; x < prices.length; x++) {
                 var price = prices[x];
-                priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
+                priceRowStart = priceRowStart + "<td>$" + price + ".99</td>";
               }
               table.append(priceRowStart);
             }
@@ -129,7 +129,7 @@ $(function() {
 
             for(x = 0; x < prices.length; x++) {
               var price = Math.round(prices[x] * 1.5);
-              priceRowStart = priceRowStart + "<td>" + price + ".99</td>";
+              priceRowStart = priceRowStart + "<td>$" + price + ".99</td>";
             }
             table.append(priceRowStart);
           }
