@@ -84,6 +84,9 @@ $(function() {
             widthRowStart = widthRowStart + "</tr>";
             table.append(widthRowStart);
           }
+          //add widths name to table
+          var widthsTitle = $("<tr><td colspan=" + (widths.length + 1) + " style='text-align:center;'><b>WIDTHS</b></td></tr>")
+          table.append(widthsTitle);
 
           // add pricing below
           var rowPriceFunction = function(inputArray) {
@@ -108,6 +111,9 @@ $(function() {
         // add header to table
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
         table.append(header);
+        //add widths name to table
+        var widthsTitle = $("<tr><td colspan=" + (widths.length + 1) + " style='text-align:center;'><b>WIDTHS</b></td></tr>")
+        table.append(widthsTitle);
 
         // add widths to top of table
         function rowWidthFunction(inputArray) {
