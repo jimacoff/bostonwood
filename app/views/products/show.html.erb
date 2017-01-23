@@ -61,10 +61,14 @@
         <div class="color-div end">
           <img src="/images/colors/test.png" />
         </div>
+        <div class="color-div end">
+          <img src="/images/colors/test.png" />
+        </div>
       </div>
     </div>
   </div>
 <% end %>
+
 <% if current_admin != nil %>
   <%= link_to "edit product info", edit_category_product_path(@category, @product) %><br />
   <% if @product.pricing_object != nil %>
