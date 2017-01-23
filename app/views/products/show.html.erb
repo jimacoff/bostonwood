@@ -37,13 +37,30 @@
 <% end %>
 
 <div class="row">
-  <div class="small-12 columns finishes" id="unfinished-pricing">
+  <div class="small-12 columns finishes">
     <% @colors.each do |color| %>
       <div class="color-div end">
         <img src="/images/colors/test.png" class="color-image"/>
         <h4><%= color %><h4>
       </div>
     <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns mto">
+    <h3>Placing A Custom Order</h3>
+    <div class="images">
+      <div class="color-div end">
+        <img src="/images/colors/test.png" />
+      </div>
+      <div class="color-div end">
+        <img src="/images/colors/test.png" />
+      </div>
+      <div class="color-div end">
+        <img src="/images/colors/test.png" />
+      </div>
+    </div>
   </div>
 </div>
 <% if current_admin != nil %>
