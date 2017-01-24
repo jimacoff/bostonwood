@@ -70,6 +70,17 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+.height-dim {
+  background-color: white;
+  border-right:1px solid #439B4F;
+}
+
+.first-td {
+  width: 30px;
+  padding-right: 0;
+  background: white;
+}
+
 .penns-grid {
   margin-left: auto;
   margin-right:auto;
