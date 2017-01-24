@@ -2,17 +2,23 @@
   margin: 0px;
 }
 
+.open-button {
+  padding-top: 250px;
+  color: #439B4F;
+  /*text-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);*/
+}
+
 .sidebar {
   background: white;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
   padding-top: 20px;
   margin-top: 100px;
   height: 100%;
   position: fixed;
   z-index: 1;
   transition: all 0.5s;
-  width: 250px;
+  width: 0;
   display: flex;
   overflow-y: auto;
 }

@@ -15,7 +15,9 @@
 
 .main {
   padding-top: 120px;
-  margin-left: 250px;
+  width: 100%;
+  margin-left: 0;
   padding-left: 20px;
   padding-right: 20px;
+  transition: all .5s ease;
 }
