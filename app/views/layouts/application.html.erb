@@ -37,6 +37,7 @@
     </a>
     <div class="sidebar">
       <ul class="side-nav" role="navigation" title="Category List">
+        <span style="font-size:30px;cursor:pointer" class="close-button" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span><br />
         <% if current_admin != nil %>
           <%= link_to "sign out of admin", destroy_admin_session_path, method: :delete %><br />
           <%= link_to "+ new builder", new_builder_path %><br />
@@ -62,7 +63,7 @@
       </ul>
     </div>
     <div class="main small-12 medium-10 columns">
-      <span style="font-size:30px;cursor:pointer" class="open-button" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+      <span style="font-size:30px;cursor:pointer" class="open-button" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
       <% flash.each do |key, value| %>
         <div class="flash-container">
             <%= value %>
