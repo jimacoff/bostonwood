@@ -217,4 +217,33 @@ body::-webkit-scrollbar-thumb {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .color-div h4 {
+    font-size: .5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* For mobile: */
+  .unfinished-pricing-table {
+    font-size: .1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+
+  .unfinished-pricing-table td {
+    padding: 0px;
+  }
+
+  .color-div {
+    width: 30%;
+    display: inline-block;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .color-div h4 {
+    font-size: .5em;
+  }
 }

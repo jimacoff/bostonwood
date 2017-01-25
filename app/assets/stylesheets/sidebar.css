@@ -81,5 +81,11 @@
 
     .open-button {
       opacity: 1;
+      background-color: white;
+      padding: 10px;
+      padding-left: 20px;
+      left: -10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 500;
     }
 }
