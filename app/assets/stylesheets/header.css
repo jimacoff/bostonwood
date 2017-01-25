@@ -121,4 +121,22 @@
   .flag {
     width: 0;
   }
+
+  .top-header {
+    height: 60px;
+  }
+
+  .top-header img {
+    height: 50px;
+    transition: all 0.5s;
+  }
+
+  .top-header.smaller {
+    height: 40px;
+  }
+
+  .top-header.smaller img {
+    height: 30px;
+    transition: all 0.5s;
+  }
 }

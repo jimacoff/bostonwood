@@ -232,7 +232,9 @@ body::-webkit-scrollbar-thumb {
   }
 
   .unfinished-pricing-table td {
-    padding: 0px;
+    padding: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .color-div {
