@@ -83,4 +83,8 @@
       display: flex;
       overflow-y: auto;
     }
+
+    .open-button {
+      opacity: 1;
+    }
 }
