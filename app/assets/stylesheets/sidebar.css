@@ -17,11 +17,6 @@
   transition: all .5s ease;
 }
 
-.close-button i {
-  width: 50%;
-  font-size: 10px;
-}
-
 .sidebar {
   background: white;
   padding-left: 25px;
