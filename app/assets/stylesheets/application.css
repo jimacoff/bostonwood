@@ -21,3 +21,13 @@
   padding-right: 20px;
   transition: all .5s ease;
 }
+
+@media screen and (max-width: 600px) {
+  /* For mobile: */
+  .main {
+    padding-top: 120px;
+    width: 100%;
+    transition: all .5s ease;
+  }
+
+}

@@ -104,3 +104,21 @@
   height: 45px;
   transition: all 0.5s;
 }
+
+@media screen and (max-width: 600px) {
+  .hours {
+    opacity: 0;
+    width: 0;
+    color: white;
+  }
+
+  .flag-container {
+    opacity: 0;
+    width: 0;
+    float: right;
+  }
+
+  .flag {
+    width: 0;
+  }
+}

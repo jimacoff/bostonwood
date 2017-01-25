@@ -1,3 +1,15 @@
+.edit-product-image {
+  display: flex;
+  margin-bottom:10px;
+  padding: 20px;
+  height: 400px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.edit-product-image img {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+}
+
 .product-description {
   font-family: 'Biryani', sans-serif;
   height: 400px;
@@ -43,16 +55,6 @@ body::-webkit-scrollbar-thumb {
   font-size: .8em;
   white-space: pre-wrap;
   margin-top: 20px;
-}
-
-.edit-product-image {
-  display: flex;
-  margin-bottom:10px;
-  padding: 0px;
-}
-
-.edit-product-image img {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .builder-title {
@@ -173,4 +175,46 @@ body::-webkit-scrollbar-thumb {
 .images {
   display: flex;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+  /* For mobile: */
+  .product-description {
+    width: 100%;
+  }
+
+  .edit-product-image {
+    width: 100%;
+    height: 50vh;
+  }
+
+
+  #finished-pricing {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 100%;
+  }
+
+  #unfinished-pricing {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .unfinished-pricing-table {
+    font-size: .6em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+
+  .unfinished-pricing-table td {
+    padding: 5px;
+  }
+
+  .color-div {
+    width: 20%;
+    display: inline-block;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

@@ -52,3 +52,21 @@
   transition: color 0.25s, ease;
   color: #439B4F;
 }
+
+@media screen and (max-width: 600px) {
+    /* For mobile: */
+    .sidebar {
+      background: white;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 20px;
+      margin-top: 100px;
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      transition: all 0.5s;
+      width: 0;
+      display: flex;
+      overflow-y: auto;
+    }
+}

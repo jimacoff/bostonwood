@@ -2,8 +2,8 @@
 
 <div class="row top-row">
   <p>< <%= link_to @category.name, category_path(@category) %></p>
-  <div class="small-12 large-4 columns edit-product-image">
-    <%= image_tag @product.image_url(:standard) %><br />
+  <div class="small-12 large-4 columns edit-product-image" style="background:url(<%= @product.image_url(:standard) %>); background-size: cover; backgound-position: center;">
+    <!-- <%= image_tag @product.image_url(:standard) %><br /> -->
   </div>
   <div class="small-12 large-8 columns product-description">
       <h2><%= @product.builder.name %> <%= @product.name %></h2>
