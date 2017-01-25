@@ -14,7 +14,7 @@ function openNav() {
     close[0].style.opacity = 1;
     hamburger[0].style.opacity = 0;
   } else {
-    sidebar[0].style.width = "250px";
+    sidebar[0].style.width = "100%";
     sidebar[0].style.paddingLeft = "25px";
     sidebar[0].style.paddingRight = "25px";
     hamburger[0].innerHTML = "<i class='fa fa-times' aria-hidden='true'></i>"
