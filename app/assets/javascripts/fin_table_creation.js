@@ -79,13 +79,13 @@ $(function() {
           var rowWidthFunction = function(inputArray) {
             var widthRowStart = "<tr style='text-align:center; border-bottom:1px solid #439B4F; background-color:white;'><td></td><td></td>";
             for(i = 0; i < inputArray.length; i++) {
-              widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "\"</b></td>";
+              widthRowStart = widthRowStart + "<td class='width-dim'><b>" + inputArray[i] + "\"</b></td>";
             };
             widthRowStart = widthRowStart + "</tr>";
             table.append(widthRowStart);
           }
           //add widths name to table
-          var widthsTitle = $("<tr><td colspan=" + (widths.length + 2) + " style='text-align:center;'><b>WIDTHS</b></td></tr>")
+          var widthsTitle = $("<tr><td colspan=" + (widths.length + 2) + " style='text-align:center;' class='width-name'><b>width</b></td></tr>")
           table.append(widthsTitle);
 
           // add pricing below
@@ -94,7 +94,7 @@ $(function() {
               var prices = gon.unf_prices[n];
               var priceRowStart = "<tr style='text-align:center;'>";
               if (n === 0) {
-                priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>HEIGHTS</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
+                priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>height</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
               } else {
                 priceRowStart = priceRowStart + "<td class='height-dim'><b>" + heights[n] + "\"</b></td>";
               }
@@ -116,14 +116,14 @@ $(function() {
         var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
         table.append(header);
         //add widths name to table
-        var widthsTitle = $("<tr><td colspan=" + (widths.length + 2) + " style='text-align:center;'><b>WIDTHS</b></td></tr>")
+        var widthsTitle = $("<tr><td colspan=" + (widths.length + 2) + " style='text-align:center;' class='width-name'><b>width</b></td></tr>")
         table.append(widthsTitle);
 
         // add widths to top of table
         function rowWidthFunction(inputArray) {
           var widthRowStart = "<tr style='text-align:center; border-bottom:1px solid #439B4F; background-color:white;'><td></td><td></td>";
           for(i = 0; i < inputArray.length; i++) {
-            widthRowStart = widthRowStart + "<td><b>" + inputArray[i] + "\"</b></td>";
+            widthRowStart = widthRowStart + "<td class='width-dim'><b>" + inputArray[i] + "\"</b></td>";
           };
           widthRowStart = widthRowStart + "</tr>";
           table.append(widthRowStart);
@@ -136,7 +136,7 @@ $(function() {
             var prices = gon.unf_prices[n];
             var priceRowStart = "<tr style='text-align:center;'>";
             if (n === 0) {
-              priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>HEIGHTS</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
+              priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>height</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
             } else {
               priceRowStart = priceRowStart + "<td class='height-dim'><b>" + heights[n] + "\"</b></td>";
             }
