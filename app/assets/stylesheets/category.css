@@ -5,8 +5,8 @@
 .category-product {
   text-align: center;
   transition: all 0.1s, ease;
-  padding: 20px;
-  height: 100%;
+  padding: 10px;
+  height: 250px;
   margin-bottom: 20px;
 }
 
