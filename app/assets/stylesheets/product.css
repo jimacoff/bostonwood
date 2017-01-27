@@ -242,6 +242,10 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 400px) {
   /* For mobile: */
+  .edit-product-image {
+    height: 350px;
+  }
+
   .unfinished-pricing-table {
     font-size: .1em;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
