@@ -32,6 +32,8 @@ function closeNav() {
   var close = document.getElementsByClassName("close-button")
 
   if (window.innerWidth > 600) {
+    main[0].style.width = "100%";
+    main[0].style.marginLeft = "0px";
     sidebar[0].style.width = "0px";
     sidebar[0].style.paddingLeft = "0px";
     sidebar[0].style.paddingRight = "0px";
