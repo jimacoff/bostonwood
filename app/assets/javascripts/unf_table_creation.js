@@ -16,7 +16,7 @@ $(function() {
         table.append(row)
 
       } else {
-      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
+      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished " + product.build_material + "</th></tr></thead>");
       table.append(header);
       // add widths to top of table
       var rowWidthFunction = function(inputArray) {
