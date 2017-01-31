@@ -21,7 +21,7 @@
           <h3>
           Mon - Fri : 10 AM  - 7 PM<br/>
           Sat : 10 AM - 6 PM<br />
-          Sun : 11 PM - 5 PM
+          Sun : 11 AM - 5 PM
           </h3>
         </div>
         <div class="header-center">
@@ -51,7 +51,7 @@
         <a href="/site/1/locations" class="top-link">
           <b>LOCATIONS</b>
         </a>
-        <br/><br/>
+        <br/>
         <% sorted_category = Category.all.sort_by {|cat| cat.name.downcase} %>
         <% sorted_category.each_with_index do |category, index| %>
           <% if index == sorted_category.length - 1 %>
