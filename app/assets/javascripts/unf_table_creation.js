@@ -10,7 +10,7 @@ $(function() {
     if (builder.name !== "Evergreen" && widths[0] === "Size") {
 
       if (builder.name === "Penns Creek") {
-        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
+        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished " + product.build_material + "</th></tr></thead>");
         var row = $("<tr><td colspan=" + (widths.length + 1) + "><b>Currently not available unfinished</b></td></tr>")
         table.append(header);
         table.append(row)
@@ -51,7 +51,7 @@ $(function() {
     }}
 
     if (builder.name === "Evergreen" && widths[0] === "Size") {
-        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
+        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Unfinished " + product.build_material + "</th></tr></thead>");
         table.append(header);
         // add widths to top of table
         var rowWidthFunction = function(inputArray) {
@@ -86,7 +86,7 @@ $(function() {
 
       if (builder.name !== "Evergreen" && widths[0] !== "Size") {
           // add header to table
-          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Unfinished Pricing</th></tr></thead>");
+          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Unfinished " + product.build_material + "</th></tr></thead>");
           table.append(header);
           //add widths name to table
           var widthsTitle = $("<tr><td colspan=" + (widths.length + 2) + " style='text-align:center;' class='width-name'><b>width</b></td></tr>")

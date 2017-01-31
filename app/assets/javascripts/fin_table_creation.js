@@ -9,7 +9,7 @@ $(function() {
 
     if (builder.name !== "Evergreen" && widths[0] === "Size") {
 
-      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
+      var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Professionally Finished - Choose your color below</th></tr></thead>");
       table.append(header);
       // add widths to top of table
       var rowWidthFunction = function(inputArray) {
@@ -40,7 +40,7 @@ $(function() {
     }
 
     if (builder.name === "Evergreen" && widths[0] === "Size") {
-        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
+        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 1) + " style='text-align:center;'>Professionally Finished - Choose your color below</th></tr></thead>");
         table.append(header);
         // add widths to top of table
         var rowWidthFunction = function(inputArray) {
@@ -72,7 +72,7 @@ $(function() {
 
       if (builder.name !== "Evergreen" && widths[0] !== "Size") {
           // add header to table
-          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
+          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Professionally Finished - Choose your color below</th></tr></thead>");
           table.append(header);
 
           // add widths to top of table
@@ -113,7 +113,7 @@ $(function() {
 
       if (builder.name === "Evergreen" && widths[0] !== "Size") {
         // add header to table
-        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Finished Pricing</th></tr></thead>");
+        var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Professionally Finished - Choose your color below</th></tr></thead>");
         table.append(header);
         //add widths name to table
         var widthsTitle = $("<tr><td colspan=" + (widths.length + 2) + " style='text-align:center;' class='width-name'><b>width</b></td></tr>")
