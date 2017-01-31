@@ -44,6 +44,9 @@
         <h4><%= color %><h4>
       </div>
     <% end %>
+    <% if @product.builder.name === "Penns Creek" %>
+      <p>Stain samples shown are on Maple - Paint colors are only available on Maple</p>
+    <% end %>
   </div>
 </div>
 
