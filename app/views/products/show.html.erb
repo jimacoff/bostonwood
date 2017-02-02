@@ -39,7 +39,7 @@
   <div class="small-12 columns finishes">
     <% @colors.each do |color| %>
       <div class="color-div end">
-        <img src="/images/colors/test.png" class="color-image"/>
+        <img src="/images/colors/<%= @product.builder.name.split(' ')[0].downcase %>/test.png" class="color-image"/>
         <h4><%= color %><h4>
       </div>
     <% end %>
