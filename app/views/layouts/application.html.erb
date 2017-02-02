@@ -36,31 +36,33 @@
       </div>
     </a>
     <div class="sidebar">
-      <ul class="side-nav" role="navigation" title="Category List">
-        <span style="font-size:30px;cursor:pointer" class="close-button" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span><br />
-        <% if current_admin != nil %>
-          <%= link_to "sign out of admin", destroy_admin_session_path, method: :delete %><br />
-          <%= link_to "+ new builder", new_builder_path %><br />
-          <%= link_to "+ new category", new_category_path %>
-          <hr>
-        <% end %>
-        <a href="/" class="top-link">
-          <b>HOME</b>
-        </a>
-        <br />
-        <a href="/site/1/locations" class="top-link">
-          <b>LOCATIONS</b>
-        </a>
-        <br/>
-        <% sorted_category = Category.all.sort_by {|cat| cat.name.downcase} %>
-        <% sorted_category.each_with_index do |category, index| %>
-          <% if index == sorted_category.length - 1 %>
-            <%= link_to category.name, category_path(category.id), class:"last-link" %><br />
-          <% else %>
-            <%= link_to category.name, category_path(category.id) %><br />
+      <div class="side-nav">
+        <ul role="navigation" title="Category List">
+          <span style="font-size:30px;cursor:pointer" class="close-button" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span><br />
+          <% if current_admin != nil %>
+            <%= link_to "sign out of admin", destroy_admin_session_path, method: :delete %><br />
+            <%= link_to "+ new builder", new_builder_path %><br />
+            <%= link_to "+ new category", new_category_path %>
+            <hr>
           <% end %>
-        <% end %>
-      </ul>
+          <a href="/" class="top-link">
+            <b>HOME</b>
+          </a>
+          <br />
+          <a href="/site/1/locations" class="top-link">
+            <b>LOCATIONS</b>
+          </a>
+          <br/>
+          <% sorted_category = Category.all.sort_by {|cat| cat.name.downcase} %>
+          <% sorted_category.each_with_index do |category, index| %>
+            <% if index == sorted_category.length - 1 %>
+              <%= link_to category.name, category_path(category.id), class:"last-link" %><br />
+            <% else %>
+              <%= link_to category.name, category_path(category.id) %><br />
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
     </div>
     <div class="main small-12 medium-10 columns">
       <span style="font-size:30px;cursor:pointer" class="open-button" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
