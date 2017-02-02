@@ -112,8 +112,6 @@ class Product < ApplicationRecord
         'Acres',
         'Charleston',
         'American Traditional',
-        'Sand',
-        'Driftwood',
         'White',
         'Pearl',
         'Buttermilk',
@@ -121,7 +119,6 @@ class Product < ApplicationRecord
         'Williamsburg Blue',
         'Sage',
         'Chelsea Gray',
-        'Charcoal',
         'Eclipse Black'
       ]
     end
