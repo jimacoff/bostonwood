@@ -1,0 +1,22 @@
+.location-block {
+  background-color: green;
+  padding: 10px;
+}
+
+.location-block {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  padding: 30px;
+}
+
+.location-block h1 {
+  color: #439B4F;
+  font-size: 24px;
+}
+
+.location-block h3 {
+  font-size: 16px;
+  font-family: 'Biryani', sans-serif;
+  font-weight: bolder;
+}
