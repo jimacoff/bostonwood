@@ -19,5 +19,6 @@
 /coverage
 .env
 /config/cloudinary.yml
+/config/local_env.yml
 
 config/cloudinary.yml

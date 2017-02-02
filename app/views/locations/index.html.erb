@@ -1,1 +1,19 @@
-<h1>this is the locations page</h1>
+<div class="row">
+  <% @towns.each do |town| %>
+    <div class="large-6 medium-12 columns location-container">
+      <div class="location-block">
+        <h1><%= town[:town] %> Store</h1>
+        <iframe
+          width="100%"
+          height="300"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=<%= @env %>&q=<%= town[:address]%>,<%= town[:town] %>+<%= town[:state] %>" allowfullscreen>
+        </iframe>
+        <br /><br />
+        <h3><%= town[:address] %>, <%= town[:town] %>, <%= town[:state] %></h3><br />
+        <h3><%= town[:phone] %></h3><br />
+        <h3><%= town[:email] %></h3>
+      </div>
+    </div>
+  <% end %>
+</div>

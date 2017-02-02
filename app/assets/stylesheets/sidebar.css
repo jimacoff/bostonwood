@@ -33,8 +33,9 @@
   top: 65px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
   z-index: 500;
-  margin-top: 50px;
+  margin-top: 20px;
   border-radius: 5px;
+  visibility: hidden;
 }
 
 .close-button {
@@ -101,9 +102,12 @@
       top: 65px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
       z-index: 500;
+      visibility: visible;
     }
 
     .close-button {
       padding-top: 20px;
+      opacity: 0;
+      visibility: visible;
     }
 }
