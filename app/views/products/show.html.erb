@@ -2,7 +2,6 @@
 
 <div class="row top-row">
   <div class="small-12 large-4 columns edit-product-image" style="background:url(<%= @product.image_url(:standard) %>), white; background-size: contain; background-repeat: no-repeat; background-position: center;">
-    <!-- <%= image_tag @product.image_url(:standard) %><br /> -->
   </div>
   <div class="small-12 large-8 columns product-description">
       <h2><%= @product.builder.name %> <%= @product.name %></h2>
@@ -12,18 +11,22 @@
 
 
   <% if @product.builder.name != "Penns Creek" %>
-    <div class="row">
-      <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
-        <% if @product.pricing_object != nil %>
-          <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
-          </table>
+    <% if @product.name.split("-")[0] != "Design" %>
+      <div class="row">
+        <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
+          <% if @product.pricing_object != nil %>
+            <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
+            </table>
+          </div>
+          <div class="small-12 large-6 columns pricing" id="finished-pricing">
+            <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
+            </table>
+          <% end %>
         </div>
-        <div class="small-12 large-6 columns pricing" id="finished-pricing">
-          <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
-          </table>
-        <% end %>
       </div>
-    </div>
+    <% else %>
+      <%= render 'mto-' + @product.category.name %>
+    <% end %>
   <% else %>
     <div class="row penns-grid">
       <div class="small-12 large-8 large-centered columns" id="finished-pricing">
