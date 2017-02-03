@@ -138,11 +138,11 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.1s, ease;
 }
 
-.color-image:hover {
+/*.color-image:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.2);
   transition: all 0.1s, ease;
   cursor: pointer;
-}
+}*/
 
 .unfinished-pricing-table {
   font-size: .8em;
