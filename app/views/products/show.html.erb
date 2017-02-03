@@ -40,7 +40,7 @@
     <% @colors.each do |color| %>
       <div class="color-div end">
         <% if @product.builder.name === "Penns Creek" %>
-          <img src="/images/colors/<%= @product.builder.name.split(' ')[0].downcase %>/<%= color.downcase.split(" ").join("_") %>.jpg" class="color-image"/>
+          <img src="/images/colors/<%= @product.builder.name.split(' ')[0].downcase %>/<%= color.downcase.split(" ").join("_") %>.jpg" class="color-image" />
         <% else %>
           <img src="/images/colors/test.png" class="color-image"/>
         <% end %>
@@ -54,7 +54,7 @@
 </div>
 
 <% if @product.builder.name == "Evergreen" || @product.builder.name == "Berkshire" %>
-  <div class="row">
+  <div class="row" hidden >
     <div class="small-12 columns mto">
       <h3>Placing A Custom Order</h3>
       <div class="images">
@@ -73,7 +73,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" hidden >
     <div class="small-12 columns mto bottom">
       <h3>Placing A Custom Order</h3>
       <div class="images">
