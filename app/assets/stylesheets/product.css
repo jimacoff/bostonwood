@@ -23,6 +23,28 @@
   overflow-y: auto;
 }
 
+.mto-description {
+  font-family: 'Biryani', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: white;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  height: 200px;
+}
+
+.mto-description.left {
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
 body::-webkit-scrollbar {
     width: 1em;
 }
@@ -37,6 +59,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .product-description h2 {
+  color: #439B4F;
+  font-size: 24px;
+  white-space: pre-wrap;
+  font-weight: bold;
+  margin: 0;
+}
+
+.mto-description h2 {
   color: #439B4F;
   font-size: 24px;
   white-space: pre-wrap;
@@ -128,7 +158,31 @@ body::-webkit-scrollbar-thumb {
   padding-right: 10px;
 }
 
+.mto-div {
+  margin-top: 10px;
+  width: 32%;
+  display: inline-block;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.mto-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mto-div.two {
+  width: 45%;
+}
+
 .color-div h4 {
+  font-size: .8em;
+  display: inline-flex;
+}
+
+.mto-div h4 {
   font-size: .8em;
   display: inline-flex;
 }
@@ -196,6 +250,10 @@ body::-webkit-scrollbar-thumb {
 .images {
   display: flex;
   justify-content: space-around;
+}
+
+.row.mto-row {
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
