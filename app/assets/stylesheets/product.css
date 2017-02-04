@@ -23,6 +23,37 @@
   overflow-y: auto;
 }
 
+.mto-description {
+  font-family: 'Biryani', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: white;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  height: 200px;
+}
+
+.mto-description.final-desk {
+  text-align: center;
+  height: 275px;
+}
+
+.mto-description.left {
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.mto-description.desks {
+  height: 375px;
+}
+
 body::-webkit-scrollbar {
     width: 1em;
 }
@@ -37,6 +68,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .product-description h2 {
+  color: #439B4F;
+  font-size: 24px;
+  white-space: pre-wrap;
+  font-weight: bold;
+  margin: 0;
+}
+
+.mto-description h2 {
   color: #439B4F;
   font-size: 24px;
   white-space: pre-wrap;
@@ -128,7 +167,36 @@ body::-webkit-scrollbar-thumb {
   padding-right: 10px;
 }
 
+.mto-div {
+  margin-top: 10px;
+  width: 32%;
+  display: inline-block;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.mto-div.desks {
+  justify-content: space-around;
+  width: 45%;
+}
+
+.mto-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mto-div.two {
+  width: 45%;
+}
+
 .color-div h4 {
+  font-size: .8em;
+  display: inline-flex;
+}
+
+.mto-div h4 {
   font-size: .8em;
   display: inline-flex;
 }
@@ -138,11 +206,11 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.1s, ease;
 }
 
-.color-image:hover {
+/*.color-image:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.2);
   transition: all 0.1s, ease;
   cursor: pointer;
-}
+}*/
 
 .unfinished-pricing-table {
   font-size: .8em;
@@ -196,6 +264,25 @@ body::-webkit-scrollbar-thumb {
 .images {
   display: flex;
   justify-content: space-around;
+}
+
+.row.mto-row {
+  margin-bottom: 20px;
+}
+
+.top-image-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-image {
+  width: 40%;
+  height: 40%;
+}
+
+.top-image.desks {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 600px) {

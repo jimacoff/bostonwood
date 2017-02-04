@@ -59,7 +59,7 @@ class Product < ApplicationRecord
     elsif builder == "Berkshire"
       [
         'Natural',
-        'White',
+        'White Wash',
         'Golden Oak',
         'Distressed Oak',
         'Country Pine',

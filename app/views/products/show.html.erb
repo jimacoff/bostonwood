@@ -2,7 +2,6 @@
 
 <div class="row top-row">
   <div class="small-12 large-4 columns edit-product-image" style="background:url(<%= @product.image_url(:standard) %>), white; background-size: contain; background-repeat: no-repeat; background-position: center;">
-    <!-- <%= image_tag @product.image_url(:standard) %><br /> -->
   </div>
   <div class="small-12 large-8 columns product-description">
       <h2><%= @product.builder.name %> <%= @product.name %></h2>
@@ -12,18 +11,22 @@
 
 
   <% if @product.builder.name != "Penns Creek" %>
-    <div class="row">
-      <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
-        <% if @product.pricing_object != nil %>
-          <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
-          </table>
+    <% if @product.name.split("-")[0] != "Design" %>
+      <div class="row">
+        <div class="small-12 large-6 columns pricing" id="unfinished-pricing">
+          <% if @product.pricing_object != nil %>
+            <table class="unfinished-pricing-table" id="unfinished-pricing-table-<%= @product.id %>">
+            </table>
+          </div>
+          <div class="small-12 large-6 columns pricing" id="finished-pricing">
+            <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
+            </table>
+          <% end %>
         </div>
-        <div class="small-12 large-6 columns pricing" id="finished-pricing">
-          <table class="unfinished-pricing-table" id="finished-pricing-table-<%= @product.id %>">
-          </table>
-        <% end %>
       </div>
-    </div>
+    <% else %>
+      <%= render 'mto-' + @product.category.name.split(" ")[0] %>
+    <% end %>
   <% else %>
     <div class="row penns-grid">
       <div class="small-12 large-8 large-centered columns" id="finished-pricing">
@@ -39,8 +42,8 @@
   <div class="small-12 columns finishes">
     <% @colors.each do |color| %>
       <div class="color-div end">
-        <% if @product.builder.name === "Penns Creek" %>
-          <img src="/images/colors/<%= @product.builder.name.split(' ')[0].downcase %>/<%= color.downcase.split(" ").join("_") %>.jpg" class="color-image"/>
+        <% if @product.builder.name === "Penns Creek" || @product.builder.name === "Berkshire" %>
+          <img src="/images/colors/<%= @product.builder.name.split(' ')[0].downcase %>/<%= color.downcase.split(" ").join("_") %>.jpg" class="color-image" />
         <% else %>
           <img src="/images/colors/test.png" class="color-image"/>
         <% end %>
@@ -54,7 +57,7 @@
 </div>
 
 <% if @product.builder.name == "Evergreen" || @product.builder.name == "Berkshire" %>
-  <div class="row">
+  <div class="row" hidden >
     <div class="small-12 columns mto">
       <h3>Placing A Custom Order</h3>
       <div class="images">
@@ -73,7 +76,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" hidden >
     <div class="small-12 columns mto bottom">
       <h3>Placing A Custom Order</h3>
       <div class="images">
