@@ -42,11 +42,7 @@
   <div class="small-12 columns finishes">
     <% @colors.each do |color| %>
       <div class="color-div end">
-        <% if @product.builder.name === "Penns Creek" || @product.builder.name === "Berkshire" %>
           <img src="/images/colors/<%= @product.builder.name.split(' ')[0].downcase %>/<%= color.downcase.split(" ").join("_") %>.jpg" class="color-image" />
-        <% else %>
-          <img src="/images/colors/test.png" class="color-image"/>
-        <% end %>
         <h4><%= color %><h4>
       </div>
     <% end %>
