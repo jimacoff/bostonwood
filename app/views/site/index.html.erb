@@ -1,7 +1,8 @@
-<% text = ['Radiator covers', 'Wall units', 'Beds, dressers and more', 'Dining tables and chairs', 'Bookcases', 'Cabinets, sideboards and buffets'].sort %>
+<% text = ['Beds, dressers and more', 'Bookcases', 'Cabinets, sideboards and buffets', 'Dining tables and chairs', 'Radiator covers', 'Wall units'] %>
+<% links = ['31', '26', '50', '37', '42', '46'] %>
 <div class="row" id="homepage">
   <% @pictures.each_with_index do |image, index| %>
-   <a href="/categories/1">
+   <a href="/categories/<%= links[index] %>">
     <div class="homepage-image end" style="background:
       linear-gradient(
         rgba(0, 0, 0, 0.0),
