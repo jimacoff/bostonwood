@@ -36,9 +36,9 @@ class Product < ApplicationRecord
     if builder == "Evergreen"
       [
         'Natural',
-        'White',
+        'White Wash',
         'Golden Oak',
-        'Distressed Oak',
+        'Distressed Pecan',
         'Country Pine',
         'Meadow Oak',
         'Orange Walnut',
@@ -59,9 +59,9 @@ class Product < ApplicationRecord
     elsif builder == "Berkshire"
       [
         'Natural',
-        'White',
+        'White Wash',
         'Golden Oak',
-        'Distressed Oak',
+        'Distressed Pecan',
         'Country Pine',
         'Meadow Oak',
         'Orange Walnut',
