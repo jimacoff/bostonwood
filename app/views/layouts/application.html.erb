@@ -38,7 +38,7 @@
     <div class="sidebar">
       <div class="side-nav">
         <ul role="navigation" title="Category List">
-          <span style="font-size:30px;cursor:pointer" class="close-button" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span><br />
+          <br />
           <% if current_admin != nil %>
             <%= link_to "sign out of admin", destroy_admin_session_path, method: :delete %><br />
             <%= link_to "+ new builder", new_builder_path %><br />
