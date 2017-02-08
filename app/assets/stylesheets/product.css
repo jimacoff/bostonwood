@@ -285,7 +285,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   /* For mobile: */
   .product-description {
     width: 100%;

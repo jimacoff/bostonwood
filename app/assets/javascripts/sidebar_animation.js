@@ -1,8 +1,9 @@
 function openNav() {
   var sidebar = document.getElementsByClassName("sidebar");
+  var sidenav = document.getElementsByClassName("side-nav")
   var main = document.getElementsByClassName("main")
   var hamburger = document.getElementsByClassName("open-button")
-  var close = document.getElementsByClassName("close-button")
+
   if (window.innerWidth > 600) {
     main[0].style.marginLeft = "250px";
     main[0].style.width = "80%";
@@ -11,16 +12,15 @@ function openNav() {
     sidebar[0].style.paddingRight = "25px";
     hamburger[0].innerHTML = "<i class='fa fa-times' aria-hidden='true'></i>"
     hamburger[0].onclick = closeNav
-    close[0].style.opacity = 1;
-    hamburger[0].style.opacity = 0;
+    hamburger[0].style.opacity = 1;
   } else {
     sidebar[0].style.width = "100%";
     sidebar[0].style.paddingLeft = "25px";
     sidebar[0].style.paddingRight = "25px";
     hamburger[0].innerHTML = "<i class='fa fa-times' aria-hidden='true'></i>"
     hamburger[0].onclick = closeNav
-    close[0].style.opacity = 1;
-    hamburger[0].style.opacity = 0;
+    hamburger[0].style.opacity = 1;
+    sidenav[0].style.opacity = 1;
   }
 
 }
@@ -29,7 +29,7 @@ function closeNav() {
   var sidebar = document.getElementsByClassName("sidebar");
   var main = document.getElementsByClassName("main")
   var hamburger = document.getElementsByClassName("open-button")
-  var close = document.getElementsByClassName("close-button")
+  var sidenav = document.getElementsByClassName("side-nav")
 
   if (window.innerWidth > 600) {
     main[0].style.width = "100%";
@@ -39,7 +39,6 @@ function closeNav() {
     sidebar[0].style.paddingRight = "0px";
     hamburger[0].innerHTML = "<i class='fa fa-bars' aria-hidden='true'></i>"
     hamburger[0].onclick = openNav;
-    close[0].style.opacity = 0;
     hamburger[0].style.opacity = 1;
   } else {
     main[0].style.marginLeft = "0px";
@@ -49,8 +48,9 @@ function closeNav() {
     sidebar[0].style.paddingRight = "0px";
     hamburger[0].innerHTML = "<i class='fa fa-bars' aria-hidden='true'></i>"
     hamburger[0].onclick = openNav;
-    close[0].style.opacity = 0;
     hamburger[0].style.opacity = 1;
+    sidenav[0].style.opacity = 0;
+
   }
 
 }
