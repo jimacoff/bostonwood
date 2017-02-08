@@ -1,5 +1,6 @@
 function openNav() {
   var sidebar = document.getElementsByClassName("sidebar");
+  var sidenav = document.getElementsByClassName("side-nav")
   var main = document.getElementsByClassName("main")
   var hamburger = document.getElementsByClassName("open-button")
   var close = document.getElementsByClassName("close-button")
@@ -21,6 +22,7 @@ function openNav() {
     hamburger[0].onclick = closeNav
     close[0].style.opacity = 1;
     hamburger[0].style.opacity = 0;
+    sidenav[0].style.opacity = 1;
   }
 
 }
@@ -30,6 +32,7 @@ function closeNav() {
   var main = document.getElementsByClassName("main")
   var hamburger = document.getElementsByClassName("open-button")
   var close = document.getElementsByClassName("close-button")
+  var sidenav = document.getElementsByClassName("side-nav")
 
   if (window.innerWidth > 600) {
     main[0].style.width = "100%";
@@ -51,6 +54,8 @@ function closeNav() {
     hamburger[0].onclick = openNav;
     close[0].style.opacity = 0;
     hamburger[0].style.opacity = 1;
+    sidenav[0].style.opacity = 0;
+
   }
 
 }
