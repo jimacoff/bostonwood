@@ -6,7 +6,16 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Sanchez|Biryani:200" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/4d47250886.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-32486902-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
     <title><%= content_for?(:title) ? yield(:title) : "bostonwood" %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= include_gon(init: true) %>
