@@ -285,7 +285,42 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1001px) and (max-width: 1280px) {
+  .color-div {
+    width: 20%;
+    display: inline-block;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .color-div h4 {
+    font-size: .5em;
+  }
+
+  #finished-pricing {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 100%;
+  }
+
+  #unfinished-pricing {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .unfinished-pricing-table {
+    font-size: .6em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+
+  .unfinished-pricing-table td {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   /* For mobile: */
   .product-description {
     width: 100%;
