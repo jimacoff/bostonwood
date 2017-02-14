@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @category = CCategory.find_by name: (params[:category_name])
+    @category = Category.find_by name: (params[:category_name])
     @product = @category.products.find(params[:id])
 
     @product.update_attributes(product_params)
