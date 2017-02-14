@@ -45,14 +45,14 @@ class CategoriesController < ApplicationController
 
   def edit
     if !current_admin.nil?
-      @category = Category.find(params[:id])
+      @category = Category.find_by name: (params[:name])
     else
       redirect_to root_path
     end
   end
 
   def update
-    @category = Category.find(params[:id])
+    @category = Category.find_by name: (params[:name])
     @category.update_attributes(category_params)
 
     if @category.save
@@ -64,7 +64,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
+    @category = Category.find_by name: (params[:name])
     @category.delete
     redirect_to root_path
     flash[:notice] = "Category deleted"

@@ -94,7 +94,7 @@
 <% end %>
 
 <% if current_admin != nil %>
-  <%= link_to "edit product info", edit_category_product_path(@category, @product) %><br />
+  <%= link_to "edit product info", edit_category_product_path(@category.name, @product) %><br />
   <% if @product.pricing_object != nil %>
     <%= link_to "edit pricing info", edit_pricing_path(@pricing_object) %>
   <% else %>

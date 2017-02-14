@@ -2,7 +2,7 @@
 class ProductsController < ApplicationController
   def new
     if !current_admin.nil?
-      @category = Category.find(params[:category_id])
+      @category = Category.find_by name: (params[:category_name])
       @product = Product.new
     else
       redirect_to category_path(@category)
@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by name: (params[:category_name])
     @product = Product.new(product_params)
     @product.category = @category
     @product.builder = Builder.find(params[:product][:builder])
@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
 
   def edit
     if !current_admin.nil?
-      @category = Category.find(params[:category_id])
+      @category = Category.find_by name: (params[:category_name])
       @product = @category.products.find(params[:id])
     else
       redirect_to category_path(@category)
@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @category = Category.find(params[:category_id])
+    @category = CCategory.find_by name: (params[:category_name])
     @product = @category.products.find(params[:id])
 
     @product.update_attributes(product_params)
