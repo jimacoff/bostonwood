@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @category = Category.find_by name: (params[:category_name])
+    @category = Category.find(params[:category_name])
     @product = Product.new(product_params)
     @product.category = @category
     @product.builder = Builder.find(params[:product][:builder])
