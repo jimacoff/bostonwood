@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @category = Category.find_by name: (params[:category_name])
+    @category = Category.find(params[:category_name])
     @product = Product.new(product_params)
     @product.category = @category
     @product.builder = Builder.find(params[:product][:builder])
@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @category = CCategory.find_by name: (params[:category_name])
+    @category = Category.find(params[:category_name])
     @product = @category.products.find(params[:id])
 
     @product.update_attributes(product_params)
@@ -57,7 +57,7 @@ class ProductsController < ApplicationController
       @product.image = params[:product][:image]
     end
     if @product.save
-      redirect_to category_product_path(@category, @product)
+      redirect_to category_product_path(@category.name, @product)
     else
       flash[:notice] = @product.errors.full_messages.join(", ")
       render action: 'edit'
