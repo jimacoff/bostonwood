@@ -1,7 +1,7 @@
 <div class="row product-row">
   <% if @eg_products != [] %>
       <% @eg_products.each_with_index do |product, index| %>
-        <a href="<%= @category.id %>/products/<%= product.id %>">
+        <a href="<%= @category.name %>/products/<%= product.id %>">
           <div class="category-product small-12 medium-3 columns">
             <div class="product-thumbnail">
               <img src="<%= product.image_url(:thumbnail) %>" />
@@ -21,7 +21,7 @@
   <% if @bk_products != [] %>
       <% @bk_products.each_with_index do |product, index| %>
         <% if product.name.split("-")[0] == "Design" %>
-          <a href="<%= @category.id %>/products/<%= product.id %>">
+          <a href="<%= @category.name %>/products/<%= product.id %>">
             <div class="category-product dyo small-12 medium-3 columns">
               <div class="design-your-own">
                 <b><%= product.name %> </b><br />
@@ -30,7 +30,7 @@
             </div>
           </a>
         <% else %>
-          <a href="<%= @category.id %>/products/<%= product.id %>">
+          <a href="<%= @category.name %>/products/<%= product.id %>">
             <div class="category-product small-12 medium-3 columns">
               <div class="product-thumbnail">
                 <img src="<%= product.image_url(:thumbnail) %>" />
@@ -53,7 +53,7 @@
 
   <% if @arch_products != [] %>
       <% @arch_products.each do |product| %>
-      <a href="<%= @category.id %>/products/<%= product.id %>">
+      <a href="<%= @category.name %>/products/<%= product.id %>">
         <div class="category-product small-12 medium-3 columns">
           <div class="product-thumbnail">
             <img src="<%= product.image_url(:thumbnail) %>" />
@@ -75,7 +75,7 @@
 
   <% if @penns_products != [] %>
       <% @penns_products.each do |product| %>
-      <a href="<%= @category.id %>/products/<%= product.id %>">
+      <a href="<%= @category.name %>/products/<%= product.id %>">
         <div class="category-product small-12 medium-3 columns">
           <div class="product-thumbnail">
             <img src="<%= product.image_url(:thumbnail) %>" />
