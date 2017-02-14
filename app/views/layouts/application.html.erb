@@ -65,9 +65,9 @@
           <% sorted_category = Category.all.sort_by {|cat| cat.name.downcase} %>
           <% sorted_category.each_with_index do |category, index| %>
             <% if index == sorted_category.length - 1 %>
-              <%= link_to category.name, category_path(category.id), class:"last-link" %><br />
+              <%= link_to category.name, category_path(category.name), class:"last-link" %><br />
             <% else %>
-              <%= link_to category.name, category_path(category.id) %><br />
+              <%= link_to category.name, category_path(category.name) %><br />
             <% end %>
           <% end %>
         </ul>

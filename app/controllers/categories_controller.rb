@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+    @category = Category.find_by name: (params[:name])
     @eg_products = []
     @bk_products = []
     @arch_products = []
