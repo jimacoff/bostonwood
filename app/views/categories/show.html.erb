@@ -94,8 +94,8 @@
 </div>
 
 <% if current_admin != nil %>
-  <%= link_to "add new product", new_category_product_path(@category) %><br />
-  <%= link_to "edit category info", edit_category_path(@category) %><br />
+  <%= link_to "add new product", new_category_product_path(@category.name) %><br />
+  <%= link_to "edit category info", edit_category_path(@category.name) %><br />
   <span class="delete-link">
     <%= link_to "delete category", category_path(@category), {method: :delete} %>
   </span>
