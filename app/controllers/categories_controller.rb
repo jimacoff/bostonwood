@@ -41,6 +41,10 @@ class CategoriesController < ApplicationController
           @penns_products << product
       end
     end
+    @eg_products = @eg_products.sort_by{ |x| x.order_num }
+    @bk_products = @bk_products.sort_by{ |x| x.order_num }
+    @arch_products = @arch_products.sort_by{ |x| x.order_num }
+    @penns_products = @penns_products.sort_by{ |x| x.order_num }
   end
 
   def edit
