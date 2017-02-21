@@ -125,7 +125,7 @@ $(function() {
       if (builder.name === "Evergreen" && widths[0] !== "Size") {
 
           // add header to table
-          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>Unfinished " + product.build_material + "</th></tr></thead>");
+          var header = $("<thead><tr><th width='150' colspan=" + (widths.length + 2) + " style='text-align:center;'>" + product.build_material + " - unfinished</th></tr></thead>");
           table.append(header);
           //add widths name to table
           var widthsTitle = $("<tr><td colspan=" + (widths.length + 2) + " style='text-align:center;' class='width-name'><b>width</b></td></tr>")
