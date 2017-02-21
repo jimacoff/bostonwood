@@ -6,8 +6,20 @@
 <a href="http://www.bostonwood.com">bostonwood.com</a>
 
 ##DESCRIPTION
+App built in Ruby on Rails as a digital catalouge for a Boston-based furniture company. The site is designed to allow potential customers to quickly view products, pricing and information offered. The admin facing side allows users such as the company owner who have minimal web experience to easily add or update products, pictures, pricing and more on the site. The site launched in February 2017, and currently recieves around 600 unique pageviews a day. 
 
 ##FEATURES
+* Over 200 products in 20 categories currently, with final site expected to have around 500 across 30 categories.
+* Responsive design works across all screen sizes.
+* Admin users can add and update products.
+* Single 'product' page template that renders fields such as paint colors based on product manufacturer.
+* Price grids are created on page load in any size and two standard configurations based on the JSON data being passed.
+* Cloud storage integrtion for all product images. Furniture colors and homepage images are stored on Heroku server.
 
 ##TECHNOLOGIES USED
-
+* Ruby on Rails v 5.0
+* Javascript
+* Heroku hosting
+* CSS & Foundation
+* Cloudinary storage for product images.
+* Factory_Girl, Capybara and Rspec for testing.
