@@ -2,11 +2,11 @@
 require 'spec_helper'
 require 'rails_helper'
 
-describe 'Admin should be able to login' do
-  feature 'Admin has information stored in DB' do
+describe 'Admin model' do
+  feature 'has information stored' do
     let(:good_admin) { create(:admin) }
 
-    scenario 'should have an email' do
+    scenario 'and should have an email' do
       expect(good_admin.email).to eq('admin_email@bostonwood.com')
     end
   end
