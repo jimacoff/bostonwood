@@ -7,8 +7,9 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
-require 'support/factory_girl'
+# require 'support/factory_girl'
 require 'pry'
+# require 'support/helpers'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -25,7 +26,7 @@ require 'pry'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
@@ -36,6 +37,8 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
   end
+
+  config.include Helpers
 
   config.around(:each) do |example|
     DatabaseCleaner.cleaning do
