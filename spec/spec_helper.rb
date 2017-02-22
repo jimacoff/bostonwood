@@ -16,7 +16,11 @@
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 require 'coveralls'
-Coveralls.wear!('rails')
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'rspec/autorun'
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -99,3 +103,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+Coveralls.wear!('rails')
