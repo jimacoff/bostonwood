@@ -28,7 +28,8 @@ require 'pry'
 # require only the support files necessary.
 #
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-Dir["../app/models/*.rb"].each {|file| relative_require file }
+Dir["../app/models/*.rb"].each {|file| require_relative file }
+# require_relative '../app/models/Category'
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
