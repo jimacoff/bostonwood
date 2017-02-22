@@ -39,7 +39,7 @@ describe 'Admin should be able to login' do
     scenario 'and only once logged in should see sign out link in sidebar' do
       visit '/'
       expect(page).to_not have_link('sign out of admin')
-      
+
       admin_login
 
       expect(page).to have_content('sign out of admin')
