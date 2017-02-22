@@ -4,6 +4,7 @@ require 'rails_helper'
 describe 'Admin should be able to login' do
   feature 'with information stored in DB' do
     let(:admin) { create(:admin) }
+    let(:category) { create(:category) }
 
     scenario 'login page should allow email and password' do
       visit '/admins/sign_in'
