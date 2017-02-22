@@ -19,7 +19,8 @@ App built in Ruby on Rails as a digital catalouge for a Boston-based furniture c
 ##TECHNOLOGIES USED
 * Ruby on Rails v 5.0
 * Javascript
-* Heroku hosting
+* Heroku hosting with staging and development pipeline.
 * CSS & Foundation
-* Cloudinary storage for product images.
-* Factory_Girl, Capybara and Rspec for testing.
+* Cloudinary storage for product images utilizing Cloudinary gem
+* Devise gem for admin login
+* Factory_Girl, Capybara and Rspec for testing
