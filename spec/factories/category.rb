@@ -2,7 +2,7 @@
 require 'factory_girl_rails'
 
 FactoryGirl.define do
-  factory :builder do
-    sequence(:name) { |n| "test builder" }
+  factory :category do
+    sequence(:name) { |n| "test category" }
   end
 end
