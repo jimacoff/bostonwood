@@ -26,9 +26,12 @@ require 'pry'
 # require only the support files necessary.
 #
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-Dir["../app/models/*"].each { |file| require_relative file }
-# require_relative '../app/models/Category'
-# require_relative '../app/models/Builder'
+# Dir["../app/models/*"].each { |file| require_relative file }
+require_relative '../app/models/Category'
+require_relative '../app/models/Builder'
+require_relative '../app/models/Product'
+require_relative '../app/models/Pricing'
+require_relative '../app/models/Admin'
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
