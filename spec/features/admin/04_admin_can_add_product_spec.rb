@@ -17,7 +17,7 @@ describe 'Admin should be able to add new product' do
       expect(page).to have_field('product_description')
       expect(page).to have_field('product_build_material')
       expect(page).to have_field('product_builder')
-      expect(page).to have_field('product_image')
+      expect(page).to have_field('upload-here')
       expect(page).to have_button('Add New Product')
     end
 
@@ -44,11 +44,15 @@ describe 'Admin should be able to add new product' do
       expect(page).to have_content('Product added successfully')
       click_link(category.name)
       expect(page).to have_content('test product')
+
+      Cloudinary::Uploader.destroy(Product.find_by(name:'test product').image.file.public_id)
     end
 
-    # scenario 'and should NOT be able to add new product if not admin' do
-    #   visit '/'
-    #   expect(page).to_not have_link('+ new category')
-    # end
+    scenario 'and should NOT be able to add new product if not admin' do
+      visit '/'
+      click_link(category.name)
+
+      expect(page).to_not have_link('add new product')
+    end
   end
 end
