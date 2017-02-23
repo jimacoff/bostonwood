@@ -22,6 +22,7 @@ describe 'Product model' do
     scenario 'should have 20 colors called through method if builder is Evergreen' do
       expect(eg_product.colors.class).to eq(Array)
       expect(eg_product.colors.length).to eq(20)
+      #run on docker
     end
 
     scenario 'should have 25 colors called through method if builder is Berkshire' do
