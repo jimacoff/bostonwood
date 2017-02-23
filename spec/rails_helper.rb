@@ -32,7 +32,9 @@ require_relative '../app/models/Builder'
 require_relative '../app/models/Product'
 # require_relative '../app/models/Pricing'
 # require_relative '../app/models/Admin'
-
+FactoryGirl::SyntaxRunner.class_eval do
+  include RSpec::Mocks::ExampleMethods
+end
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
