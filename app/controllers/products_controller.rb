@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
     @product = @category.products.find(params[:id])
     @pricing_object = @product.pricing_object
     builder = @product.builder.name
-    @colors = @product.colors(builder)
+    @colors = @product.colors
     gon.widths = @product.widths
     gon.heights = @product.heights
     gon.productId = @product.id
