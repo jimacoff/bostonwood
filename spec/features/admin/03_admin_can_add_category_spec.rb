@@ -35,5 +35,10 @@ describe 'Admin should be able to add new category' do
       expect(page).to have_content('Category added successfully')
       expect(page).to have_link('test category')
     end
+
+    scenario 'and should NOT be able to add new category if not admin' do
+      visit '/'
+      expect(page).to_not have_link('+ new category')
+    end
   end
 end

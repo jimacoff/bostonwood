@@ -26,10 +26,10 @@
 
   <div class="field">
     <%= f.label :image %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, :id => "upload-here" %>
   </div>
   <br />
   <div class="field">
-    <%= f.submit 'Update Product' %>
+    <%= f.submit 'Add New Product' %>
   </div>
 <% end %>

@@ -32,8 +32,8 @@ class Product < ApplicationRecord
     end
   end
 
-  def colors(builder)
-    if builder == "Evergreen"
+  def colors
+    if self.builder.name == "Evergreen"
       [
         'Natural',
         'White Wash',
@@ -56,7 +56,7 @@ class Product < ApplicationRecord
         'Tobacco',
         'Black'
       ]
-    elsif builder == "Berkshire"
+    elsif self.builder.name == "Berkshire"
       [
         'Natural',
         'White Wash',
@@ -84,7 +84,7 @@ class Product < ApplicationRecord
         'Big Sky Blue',
         'Chili Pepper Red'
       ]
-    elsif builder == "Archbold"
+    elsif self.builder.name == "Archbold"
       [
         'Natural',
         'Honey',
@@ -99,7 +99,7 @@ class Product < ApplicationRecord
         'Snow White',
         'Black'
       ]
-    elsif builder == "Penns Creek"
+    elsif self.builder.name == "Penns Creek"
       [
         'Natural',
         'Sunrise',

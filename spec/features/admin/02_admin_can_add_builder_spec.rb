@@ -37,5 +37,10 @@ describe 'Admin should be able to add new builder' do
       expect(page).to have_content('Builder added successfully')
       expect(Builder.find_by(name: 'test builder').name).to eq('test builder')
     end
+
+    scenario 'and should NOT be able to add new builder if not admin' do
+      visit '/'
+      expect(page).to_not have_link('+ new builder')
+    end
   end
 end
