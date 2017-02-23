@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root "site#index"
 
-  resources :categories, param: :name, only: [:index, :show, :edit, :update, :new, :create, :destroy] do
+  resources :categories, param: :name, only: [:show, :edit, :update, :new, :create, :destroy] do
     resources :products, only: [:show, :edit, :update, :new, :create, :destroy]
   end
 

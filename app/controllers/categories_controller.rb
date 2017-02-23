@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 class CategoriesController < ApplicationController
-  def index
-    @builders = Builder.all
-  end
-
   def new
     if !current_admin.nil?
       @category = Category.new
