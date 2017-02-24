@@ -47,9 +47,9 @@ RSpec.configure do |config|
 
   config.include Helpers
 
-  config.around(:each) do |example|
+  config.around(:each) do |ind|
     DatabaseCleaner.cleaning do
-      example.run
+      ind.run
     end
   end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
