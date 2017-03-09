@@ -13,13 +13,6 @@ describe 'Admin' do
       expect(page).to have_link('delete category')
     end
 
-    # scenario 'by clicking link on category page' do
-    #   admin_login
-    #   click_link(category.name)
-    #   click_link('delete category')
-    #
-    #   expect(page).to have_content('category successfully deleted')
-    #   expect(page).to_not have_link(category.name)
-    # end
+    
   end
 end
