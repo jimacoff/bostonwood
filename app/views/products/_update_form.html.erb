@@ -23,6 +23,11 @@
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
+
+  <div class="field">
+    <%= f.label :order_num %>
+    <%= f.select :order_num, options_for_select(0..@category.products.length) %>
+  </div>
   <br />
   <div class="field">
     <%= f.submit 'Update Product' %>
