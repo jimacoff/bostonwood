@@ -26,3 +26,17 @@ App built in Ruby on Rails as a digital catalouge for a Boston-based furniture c
 * Cloudinary storage for product images utilizing Cloudinary gem
 * Devise gem for admin login
 * Factory_Girl, Capybara and Rspec for testing
+
+##RUNNING LOCALLY
+* Clone repo to local machine
+* bundler install
+* $rake db:create
+* $rake
+* The DB can be cloned from heroku - make sure you are logged in with the matching account on local machine
+* $heroku pg:pull DATABASE_URL bostonwood_development
+* $rails s
+
+##USING ADMIN INTERFACE
+* go to /admins/sign_in in browser, login
+* admin controls will be at top of sidebar and at the bottom of category and product pages
+* Will add full features ...
