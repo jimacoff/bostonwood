@@ -7,11 +7,11 @@
 
 <a href="http://www.bostonwood.com">bostonwood.com</a>
 
-##DESCRIPTION
+// DESCRIPTION
 
 App built in Ruby on Rails as a digital catalouge for a Boston-based furniture company. The site is designed to allow potential customers to quickly view products, pricing and information offered. The admin facing side allows users such as the company owner who have minimal web experience to easily add or update products, pictures, pricing and more on the site. The site launched in February 2017, and currently recieves around 600 pageviews a day. 
 
-##FEATURES
+// FEATURES
 * Over 200 products in 20 categories currently, with final site expected to have around 500 across 30 categories.
 * Responsive design works across all screen sizes.
 * Admin users can add and update products.
@@ -19,7 +19,7 @@ App built in Ruby on Rails as a digital catalouge for a Boston-based furniture c
 * Price grids are created on page load in any size and two standard configurations based on the JSON data being passed.
 * Cloud storage integrtion for all product images. Furniture colors and homepage images are stored on Heroku server.
 
-##TECHNOLOGIES USED
+// TECHNOLOGIES USED
 * Ruby on Rails v 5.0
 * Javascript
 * Heroku hosting.
@@ -28,7 +28,7 @@ App built in Ruby on Rails as a digital catalouge for a Boston-based furniture c
 * Devise gem for admin login
 * Factory_Girl, Capybara and Rspec for testing
 
-##RUNNING LOCALLY
+// RUNNING LOCALLY
 * Clone repo to local machine
 * bundler install
 * $rake db:create
@@ -37,7 +37,7 @@ App built in Ruby on Rails as a digital catalouge for a Boston-based furniture c
 * $heroku pg:pull DATABASE_URL bostonwood_development
 * $rails s
 
-##USING ADMIN INTERFACE
+// USING ADMIN INTERFACE
 * go to /admins/sign_in in browser, login
 * admin controls will be at top of sidebar and at the bottom of category and product pages
 * Will add full features ...
