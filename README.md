@@ -9,7 +9,7 @@
 
 // DESCRIPTION
 
-App built in Ruby on Rails as a digital catalouge for a Boston-based furniture company. The site is designed to allow potential customers to quickly view products, pricing and information offered. The admin facing side allows users such as the company owner who have minimal web experience to easily add or update products, pictures, pricing and more on the site. The site launched in February 2017, and currently recieves around 600 pageviews a day. 
+App built in Ruby on Rails as a digital catalouge for a Boston-based furniture company. The site is designed to allow potential customers to quickly view products, pricing and information offered. The admin facing side allows users to easily add or update products, pictures, pricing and more on the site. The site launched in February 2017, and currently recieves around 500 pageviews a day. 
 
 // FEATURES
 * Over 200 products in 20 categories currently, with final site expected to have around 500 across 30 categories.
