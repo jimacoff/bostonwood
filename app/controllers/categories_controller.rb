@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by name: (params[:name])
-    @products = @category.products.sort_by{ |x| x.order_num }
+    @products = @category.products.sort_by{ |x| x.order_num.to_i }
   end
 
   def edit
