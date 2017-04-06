@@ -21,26 +21,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by name: (params[:name])
-    @eg_products = []
-    @bk_products = []
-    @arch_products = []
-    @penns_products = []
-    working_products = @category.products
-    working_products.each_with_index do |product, index|
-      if product.builder.name == "Evergreen"
-          @eg_products << product
-        elsif product.builder.name == "Berkshire"
-          @bk_products << product
-        elsif product.builder.name == "Archbold"
-          @arch_products << product
-        else
-          @penns_products << product
-      end
-    end
-    @eg_products = @eg_products.sort_by{ |x| x.order_num }
-    @bk_products = @bk_products.sort_by{ |x| x.order_num }
-    @arch_products = @arch_products.sort_by{ |x| x.order_num }
-    @penns_products = @penns_products.sort_by{ |x| x.order_num }
+    @products = @category.products.sort_by{ |x| x.order_num.to_i }
   end
 
   def edit
