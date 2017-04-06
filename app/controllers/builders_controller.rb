@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 class BuildersController < ApplicationController
   def new
-    @builder = Builder.new
+    if !current_admin.nil?
+      @builder = Builder.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
