@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20170221201156) do
   create_table "pricings", force: :cascade do |t|
     t.integer "product_id", null: false
     t.jsonb   "data"
-    t.index ["product_id"], name: "index_pricing_on_product_id", using: :btree
+    t.index ["product_id"], name: "index_pricings_on_product_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
