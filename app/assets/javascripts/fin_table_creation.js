@@ -6,6 +6,7 @@ $(function() {
     var product = gon.product;
     var table = $("#finished-pricing-table-" + product.id);
     var builder = gon.builder;
+    var category = gon.category;
 
     if (builder.name !== "Evergreen" && widths[0] === "Size") {
 
@@ -90,22 +91,26 @@ $(function() {
 
           // add pricing below
           var rowPriceFunction = function(inputArray) {
-            for(n = 0; n < (inputArray.length); n++) {
-              var prices = gon.unf_prices[n];
-              var priceRowStart = "<tr style='text-align:center;'>";
-              if (n === 0) {
-                priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>height</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
-              } else {
-                priceRowStart = priceRowStart + "<td class='height-dim'><b>" + heights[n] + "\"</b></td>";
-              }
+              for(n = 0; n < (inputArray.length); n++) {
+                var prices = gon.unf_prices[n];
+                var priceRowStart = "<tr style='text-align:center;'>";
+                if (n === 0) {
+                  if (product.name === "Design-Your-Own" && category.name === "desks, hutches, file cabinets") {
+                    priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>depth</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
+                  } else {
+                    priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>height</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
+                  }
+                } else {
+                  priceRowStart = priceRowStart + "<td class='height-dim'><b>" + heights[n] + "\"</b></td>";
+                }
 
-              for(x = 0; x < prices.length; x++) {
-                var price = prices[x];
-                priceRowStart = priceRowStart + "<td>$" + price + ".99</td>";
+                for(x = 0; x < prices.length; x++) {
+                  var price = prices[x];
+                  priceRowStart = priceRowStart + "<td>$" + price + ".99</td>";
+                }
+                table.append(priceRowStart);
               }
-              table.append(priceRowStart);
             }
-          }
 
           rowWidthFunction(widths);
           rowPriceFunction(heights);

@@ -160,7 +160,6 @@ $(function() {
               table.append(priceRowStart);
           }};
           rowPriceFunction(heights);
-      }
-
+        }
       }
 });
