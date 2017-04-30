@@ -109,7 +109,8 @@ $(function() {
               var priceRowStart = "<tr style='text-align:center;'>";
               if (n === 0) {
                 priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>height</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
-              } else {
+              }
+              else {
                 priceRowStart = priceRowStart + "<td class='height-dim'><b>" + heights[n] + "\"</b></td>";
               }
 
@@ -162,4 +163,5 @@ $(function() {
           rowPriceFunction(heights);
         }
       }
+
 });

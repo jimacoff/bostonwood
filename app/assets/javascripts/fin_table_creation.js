@@ -97,7 +97,11 @@ $(function() {
                 if (n === 0) {
                   if (product.name === "Design-Your-Own" && category.name === "desks, hutches, file cabinets") {
                     priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>depth</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
-                  } else {
+                  }
+                  else if (category.name === "dining tables") {
+                    priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>depth</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
+                  }
+                  else {
                     priceRowStart = priceRowStart + "<td class='first-td last' rowspan=" + inputArray.length + "><p><b>height</b></p></td><td class='height-dim'><b>" + heights[n] + "\"</b></td>";
                   }
                 } else {
