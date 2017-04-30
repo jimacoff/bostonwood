@@ -43,6 +43,7 @@ class ProductsController < ApplicationController
     gon.productId = @product.id
     gon.product = @product
     gon.builder = @product.builder
+    gon.category = @category
     gon.unf_prices = @product.unfinished_prices
     gon.fin_prices = @product.finished_prices
     gon.category = @category
