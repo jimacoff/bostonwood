@@ -33,11 +33,11 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Category.find_by name: (params[:name])
+    @category = Category.find_by(id: params[:name])
     @category.update_attributes(category_params)
 
     if @category.save
-      redirect_to category_path(@category)
+      redirect_to category_path(@category.name)
     else
       flash[:notice] = @category.errors.full_messages.join(", ")
       render action: 'edit'
