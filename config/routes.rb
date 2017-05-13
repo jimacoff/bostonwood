@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   resources :site, only: [:index] do
     resources :locations, only: [:index]
   end
+
+  resources :seatings, only: [:index]
 end

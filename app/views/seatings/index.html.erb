@@ -1,0 +1,17 @@
+<% links = {'Chairs' => 'chairs', 'Stools' => 'stools', 'Benches' => 'benches'} %>
+<div class="row" id="seatings">
+  <% links.each_with_index do |link, index| %>
+  <a href="/categories/<%= link.last %>">
+    <div class="homepage-image end" style="background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.0),
+        rgba(0, 0, 0, 0.0)
+      ),
+      url('./images/seating/<%= index + 1 %>.jpg');
+      background-size: cover;
+      background-position: center;" >
+      <h4 class="image-text"><%= link.first %></h4>
+    </div>
+  </a>
+  <% end %>
+</div>
